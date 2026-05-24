@@ -1,32 +1,27 @@
 @import "tailwindcss";
 
-@theme {
-  --color-space-900: #050510;
-  --color-space-800: #0b0f19;
-  --color-space-700: #121826;
+@theme {  --color-space-900: #000000;
+  --color-space-800: #0a0a0a;
+  --color-space-700: #171717;
   
-  --color-neon-cyan: #00f0ff;
-  --color-neon-purple: #8b5cf6;
-  --color-neon-blue: #3b82f6;
+  --color-neon-cyan: #ffffff;
+  --color-neon-purple: #a3a3a3;
+  --color-neon-blue: #ffffff;
 
-  --color-glass: rgba(255, 255, 255, 0.03);
-  --color-glass-border: rgba(255, 255, 255, 0.08);
+  --color-glass: rgba(255, 255, 255, 0.01);
+  --color-glass-border: rgba(255, 255, 255, 0.1);
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 }
 
 :root {
-  --background: #050510;
-  --foreground: #e2e8f0;
+  --background: #000000;
+  --foreground: #ededed;
 }
 
 body {
   background-color: var(--background);
   color: var(--foreground);
-  background-image: 
-    radial-gradient(circle at 15% 50%, rgba(139, 92, 246, 0.08) 0%, transparent 50%),
-    radial-gradient(circle at 85% 30%, rgba(0, 240, 255, 0.08) 0%, transparent 50%);
-  background-attachment: fixed;
 }
 
 /* Glassmorphism utilities */
