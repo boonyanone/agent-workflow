@@ -60,10 +60,14 @@ export default function FeaturesSection() {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
               whileHover={{ y: -5, scale: 1.01 }}
-              className="group bg-[#0a0a0a] border border-[#333] p-10 hover:border-blue-500/50 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-300 relative overflow-hidden"
+              className="relative group"
             >
-              {/* Subtle gradient glow on hover */}
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              {/* Static Background Glow */}
+              <div className="absolute inset-0 bg-blue-900/20 blur-3xl z-0 rounded-2xl"></div>
+
+              <div className="relative bg-[#0a0a0a] border border-[#333] p-10 hover:border-blue-500/50 transition-all duration-300 overflow-hidden z-10 h-full rounded-lg">
+                {/* Subtle gradient glow on hover */}
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               
               <div className="relative w-16 h-16 bg-[#171717] border border-[#333] group-hover:border-blue-500/50 group-hover:text-blue-400 flex items-center justify-center mb-8 transition-colors duration-300">
                 {feature.icon}
@@ -81,6 +85,7 @@ export default function FeaturesSection() {
                 <div className="flex gap-3">
                   <span className="text-green-500 font-bold shrink-0">Solution:</span>
                   <span className="text-gray-300 font-medium">{feature.sol}</span>
+                </div>
                 </div>
               </div>
             </motion.div>

@@ -36,10 +36,10 @@ export default function AnimatedTerminal() {
       transition={{ duration: 0.8, delay: 0.6 }}
       className="w-full mx-auto relative group"
     >
-      {/* Glowing Rotating Border Wrapper */}
-      <div className="absolute -inset-[2px] rounded-xl overflow-hidden opacity-80 group-hover:opacity-100 transition-opacity duration-500">
+      {/* Glowing Rotating Aura Wrapper */}
+      <div className="absolute -inset-[4px] rounded-2xl overflow-hidden opacity-50 group-hover:opacity-100 blur-2xl transition-all duration-700">
         <div className="absolute inset-[-50%] animate-spin-slow" style={{
-          background: 'conic-gradient(from 0deg, transparent 0%, #3b82f6 20%, #a855f7 40%, #06b6d4 60%, transparent 80%)'
+          background: 'conic-gradient(from 0deg, transparent 0%, rgba(59, 130, 246, 0.8) 20%, rgba(168, 85, 247, 0.8) 40%, rgba(6, 182, 212, 0.8) 60%, transparent 80%)'
         }}></div>
       </div>
 

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Terminal, ArrowRight, ShieldCheck, Zap, Database } from "lucide-react";
 import { useTranslations } from "next-intl";
 import AnimatedTerminal from "./AnimatedTerminal";
+import { Link } from "@/i18n/routing";
 
 export default function HeroSection() {
   const t = useTranslations("HomePage");
@@ -44,10 +45,10 @@ export default function HeroSection() {
               <Terminal size={20} />
               {t("cta_install")}
             </a>
-            <a href="/manual" className="w-full sm:w-auto px-8 py-4 rounded-md bg-transparent border border-[#333] text-white font-medium hover:bg-white/5 transition-colors flex items-center justify-center gap-2">
+            <Link href="/manual" className="w-full sm:w-auto px-8 py-4 rounded-md bg-transparent border border-[#333] text-white font-medium hover:bg-white/5 transition-colors flex items-center justify-center gap-2">
               {t("cta_manual")}
               <ArrowRight size={20} />
-            </a>
+            </Link>
           </motion.div>
           
           <motion.div 
