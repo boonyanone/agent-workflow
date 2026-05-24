@@ -3,7 +3,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useTranslations } from "next-intl";
-import { Terminal, Copy, Check, Info } from "lucide-react";
+import { Copy, Check } from "lucide-react";
 import { useState } from "react";
 
 export default function ManualPage() {
@@ -17,14 +17,14 @@ export default function ManualPage() {
   };
 
   const CodeBlock = ({ command, multiline = false }: { command: string, multiline?: boolean }) => (
-    <div className="relative w-full bg-[#0a0a0a] border border-[#333] rounded-md overflow-hidden group hover:border-gray-500 transition-colors">
-      <div className="flex items-center justify-between px-4 py-2 bg-[#000000] border-b border-[#333]">
-        <div className="flex gap-2 text-xs font-mono text-gray-500">TERMINAL</div>
+    <div className="relative w-full bg-[#111] border border-[#333] rounded overflow-hidden my-4">
+      <div className="flex items-center justify-between px-4 py-2 bg-[#050505] border-b border-[#333]">
+        <div className="text-xs font-mono text-gray-500">BASH</div>
         <button 
           onClick={() => copyCommand(command)}
           className="text-gray-500 hover:text-white transition-colors"
         >
-          {copiedCmd === command ? <Check size={16} className="text-white" /> : <Copy size={16} />}
+          {copiedCmd === command ? <Check size={14} className="text-green-500" /> : <Copy size={14} />}
         </button>
       </div>
       <div className="p-4 overflow-x-auto">
@@ -43,155 +43,75 @@ export default function ManualPage() {
   );
 
   return (
-    <main className="min-h-screen bg-[#000000] pt-24">
+    <main className="min-h-screen bg-[#000000] pt-24 text-gray-300">
       <Navbar />
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-32 pt-10">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 pb-32 pt-10">
         
         {/* Header */}
-        <div className="mb-16 border-b border-[#333] pb-10">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4 tracking-tight">{t("title")}</h1>
-          <p className="text-xl text-gray-400 font-medium">{t("subtitle")}</p>
+        <div className="mb-12 border-b border-[#333] pb-8">
+          <h1 className="text-4xl font-bold text-white mb-4 tracking-tight">{t("title")}</h1>
+          <p className="text-lg text-gray-400">{t("subtitle")}</p>
         </div>
 
-        <div className="flex flex-col lg:flex-row gap-16">
+        {/* Main Content Area - Plain Text Style */}
+        <article className="prose prose-invert prose-p:text-gray-300 prose-headings:text-white max-w-none space-y-12">
           
-          {/* Sticky Sidebar */}
-          <aside className="w-full lg:w-64 flex-shrink-0 hidden md:block">
-            <div className="sticky top-32">
-              <h4 className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-6">On this page</h4>
-              <nav className="space-y-4 border-l border-[#333] pl-6">
-                <a href="#problems" className="block text-sm font-medium text-gray-500 hover:text-white transition-colors">{t("menu_problems")}</a>
-                <a href="#notebooklm" className="block text-sm font-medium text-gray-500 hover:text-white transition-colors">{t("menu_notebooklm")}</a>
-                <a href="#security" className="block text-sm font-medium text-gray-500 hover:text-white transition-colors">{t("menu_security")}</a>
-                <a href="#structure" className="block text-sm font-medium text-gray-500 hover:text-white transition-colors">{t("menu_structure")}</a>
-                <a href="#guidelines" className="block text-sm font-medium text-gray-500 hover:text-white transition-colors">{t("menu_guidelines")}</a>
-                <a href="#themes" className="block text-sm font-medium text-gray-500 hover:text-white transition-colors">{t("menu_themes")}</a>
-                <a href="#script" className="block text-sm font-medium text-gray-500 hover:text-white transition-colors">{t("menu_script")}</a>
-                <a href="#workflow" className="block text-sm font-medium text-gray-500 hover:text-white transition-colors">{t("menu_workflow")}</a>
-              </nav>
-            </div>
-          </aside>
+          <section>
+            <h2 className="text-2xl font-bold text-white mb-4">{t("install_title")}</h2>
+            <p className="mb-4 text-gray-400 leading-relaxed">{t("install_desc")}</p>
+            <CodeBlock command="git clone https://github.com/boonyanone/ai-coding-protocol.git" />
+          </section>
 
-          {/* Main Content Area */}
-          <div className="flex-1 space-y-24 max-w-3xl">
+          <section>
+            <h2 className="text-2xl font-bold text-white mb-6">{t("core_commands_title")}</h2>
             
-            <section id="problems" className="scroll-mt-32">
-              <h2 className="text-3xl font-extrabold text-white mb-8 tracking-tight">{t("problems_title")}</h2>
-              <p className="text-gray-400 leading-relaxed mb-6 text-lg">{t("problems_p1")}</p>
-              <ul className="list-disc pl-6 space-y-3 text-gray-500 mb-10 marker:text-gray-500">
-                <li><strong className="text-white">Context Size:</strong> {t("problems_li1").split(': ')[1]}</li>
-                <li><strong className="text-white">Context Loss:</strong> {t("problems_li2").split(': ')[1]}</li>
-                <li><strong className="text-white">Inconsistency:</strong> {t("problems_li3").split(': ')[1]}</li>
-              </ul>
-              <p className="text-gray-400 leading-relaxed mb-6 text-lg">{t("problems_p2")}</p>
-              <div className="bg-[#0a0a0a] border border-[#333] p-8 space-y-5">
-                <div className="flex items-start gap-4"><Check className="text-white mt-1 flex-shrink-0" size={20}/> <span className="text-gray-300 font-medium">{t("problems_sol1")}</span></div>
-                <div className="flex items-start gap-4"><Check className="text-white mt-1 flex-shrink-0" size={20}/> <span className="text-gray-300 font-medium">{t("problems_sol2")}</span></div>
-                <div className="flex items-start gap-4"><Check className="text-white mt-1 flex-shrink-0" size={20}/> <span className="text-gray-300 font-medium">{t("problems_sol3")}</span></div>
+            <div className="space-y-8">
+              <div>
+                <h3 className="text-lg font-semibold text-white mb-2">{t("cmd_check_title")}</h3>
+                <p className="mb-3 text-gray-400 leading-relaxed">{t("cmd_check_desc")}</p>
+                <CodeBlock command="./ai-protocol.sh check" />
               </div>
-            </section>
-
-            <section id="notebooklm" className="scroll-mt-32">
-              <h2 className="text-3xl font-extrabold text-white mb-8 tracking-tight">{t("notebooklm_title")}</h2>
-              <p className="text-gray-400 leading-relaxed mb-6 text-lg">{t("notebooklm_p1")}</p>
-              <div className="bg-[#0a0a0a] border-l-4 border-l-white border-t border-b border-r border-[#333] p-8">
-                <ul className="space-y-4 text-gray-300 font-medium">
-                  <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 bg-white" /> {t("notebooklm_li1")}</li>
-                  <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 bg-white" /> {t("notebooklm_li2")}</li>
-                  <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 bg-white" /> {t("notebooklm_li3")}</li>
-                </ul>
+              
+              <div>
+                <h3 className="text-lg font-semibold text-white mb-2">{t("cmd_clean_title")}</h3>
+                <p className="mb-3 text-gray-400 leading-relaxed">{t("cmd_clean_desc")}</p>
+                <CodeBlock command="./ai-protocol.sh clean" />
               </div>
-            </section>
 
-            <section id="security" className="scroll-mt-32">
-              <h2 className="text-3xl font-extrabold text-white mb-8 tracking-tight">{t("security_title")}</h2>
-              <p className="text-gray-400 leading-relaxed mb-8 text-lg">{t("security_p1")}</p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-[#0a0a0a] border border-[#333] p-8">
-                  <h4 className="font-bold text-white mb-3 flex items-center gap-2"><Info size={18} className="text-gray-500"/> File Operations</h4>
-                  <p className="text-gray-400 leading-relaxed">{t("security_li1").split(': ')[1]}</p>
-                </div>
-                <div className="bg-[#0a0a0a] border border-[#333] p-8">
-                  <h4 className="font-bold text-white mb-3 flex items-center gap-2"><Info size={18} className="text-gray-500"/> Secret Scanning</h4>
-                  <p className="text-gray-400 leading-relaxed">{t("security_li2").split(': ')[1]}</p>
-                </div>
+              <div>
+                <h3 className="text-lg font-semibold text-white mb-2">{t("cmd_handoff_title")}</h3>
+                <p className="mb-3 text-gray-400 leading-relaxed">{t("cmd_handoff_desc")}</p>
+                <CodeBlock command="./ai-protocol.sh handoff" />
               </div>
-            </section>
+            </div>
+          </section>
 
-            <section id="structure" className="scroll-mt-32">
-              <h2 className="text-3xl font-extrabold text-white mb-8 tracking-tight">{t("structure_title")}</h2>
-              <CodeBlock command={t("structure_code")} multiline={true} />
-            </section>
+          <section>
+            <h2 className="text-2xl font-bold text-white mb-4">{t("structure_title")}</h2>
+            <CodeBlock multiline command={`/ (Root Project)
+├── .ai/
+│   ├── STATE.md                    # Active task state machine
+│   ├── REFLECTIONS.md              # Historical bug fixes & learnings
+│   ├── DECISIONS.md                # Architecture Decision Records
+│   ├── templates/                  # Boilerplate blueprints
+│   ├── prompts/                    # Bootstrap instructions
+│   └── docs/                       # Project knowledge base
+├── ai-protocol.sh                   # CLI orchestrator
+└── SKILL.md                         # Core agent directives`} />
+          </section>
 
-            <section id="guidelines" className="scroll-mt-32">
-              <h2 className="text-3xl font-extrabold text-white mb-8 tracking-tight">{t("guidelines_title")}</h2>
-              <div className="space-y-12">
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-6 uppercase tracking-widest text-sm">{t("guidelines_h3_1")}</h3>
-                  <ul className="list-none space-y-4 text-gray-400">
-                    <li className="flex gap-4 border-b border-[#222] pb-4"><strong className="text-white w-40 shrink-0">API Contract-First:</strong> {t("guidelines_li1").split(': ')[1]}</li>
-                    <li className="flex gap-4 border-b border-[#222] pb-4"><strong className="text-white w-40 shrink-0">Test-Driven:</strong> {t("guidelines_li2").split(': ')[1]}</li>
-                    <li className="flex gap-4 border-b border-[#222] pb-4"><strong className="text-white w-40 shrink-0">Security:</strong> {t("guidelines_li3").split(': ')[1]}</li>
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-6 uppercase tracking-widest text-sm">{t("guidelines_h3_2")}</h3>
-                  <ul className="list-none space-y-4 text-gray-400">
-                    <li className="flex gap-4 border-b border-[#222] pb-4"><strong className="text-white w-40 shrink-0">Initialization:</strong> {t("guidelines_li4").split(': ')[1]}</li>
-                    <li className="flex gap-4 border-b border-[#222] pb-4"><strong className="text-white w-40 shrink-0">Decisions:</strong> {t("guidelines_li5").split(': ')[1]}</li>
-                  </ul>
-                </div>
-              </div>
-            </section>
+          <section>
+            <h2 className="text-2xl font-bold text-white mb-4">{t("workflow_title")}</h2>
+            <ul className="list-decimal pl-6 space-y-4 text-gray-300">
+              <li>{t("workflow_1")}</li>
+              <li>{t("workflow_2")}</li>
+              <li>{t("workflow_3")}</li>
+            </ul>
+          </section>
 
-            <section id="themes" className="scroll-mt-32">
-              <h2 className="text-3xl font-extrabold text-white mb-8 tracking-tight">{t("themes_title")}</h2>
-              <p className="text-gray-400 leading-relaxed mb-8 text-lg">{t("themes_p1")}</p>
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-                <li className="bg-[#0a0a0a] border border-[#333] p-4 text-gray-300 font-medium">🌌 {t("themes_li1").split(': ')[1]}</li>
-                <li className="bg-[#0a0a0a] border border-[#333] p-4 text-gray-300 font-medium">📊 {t("themes_li2").split(': ')[1]}</li>
-                <li className="bg-[#0a0a0a] border border-white p-4 text-white font-bold">⚪ {t("themes_li3").split(': ')[1]}</li>
-                <li className="bg-[#0a0a0a] border border-[#333] p-4 text-gray-300 font-medium">🍭 {t("themes_li4").split(': ')[1]}</li>
-              </ul>
-              <CodeBlock command={t("themes_code")} />
-            </section>
+        </article>
 
-            <section id="script" className="scroll-mt-32">
-              <h2 className="text-3xl font-extrabold text-white mb-8 tracking-tight">{t("script_title")}</h2>
-              <p className="text-gray-400 leading-relaxed mb-6 text-lg">{t("script_p1")}</p>
-              <CodeBlock command={t("script_code")} multiline={true} />
-            </section>
-
-            <section id="workflow" className="scroll-mt-32">
-              <h2 className="text-3xl font-extrabold text-white mb-8 tracking-tight">{t("workflow_title")}</h2>
-              <div className="border-l border-[#333] ml-4 pl-10 py-2 space-y-16">
-                
-                <div className="relative">
-                  <div className="absolute -left-[51px] top-0 w-6 h-6 bg-white text-black flex items-center justify-center font-bold text-sm">1</div>
-                  <h3 className="text-xl font-bold text-white mb-6 uppercase tracking-widest text-sm">{t("workflow_h3_1")}</h3>
-                  <ul className="list-none space-y-4 text-gray-400 font-medium">
-                    <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 bg-gray-600" /> {t("workflow_li1")}</li>
-                    <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 bg-gray-600" /> {t("workflow_li2")}</li>
-                    <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 bg-gray-600" /> {t("workflow_li3")}</li>
-                  </ul>
-                </div>
-
-                <div className="relative">
-                  <div className="absolute -left-[51px] top-0 w-6 h-6 bg-gray-600 text-white flex items-center justify-center font-bold text-sm">2</div>
-                  <h3 className="text-xl font-bold text-white mb-6 uppercase tracking-widest text-sm">{t("workflow_h3_2")}</h3>
-                  <ul className="list-none space-y-4 text-gray-400 font-medium">
-                    <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 bg-gray-600" /> {t("workflow_li4")}</li>
-                    <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 bg-gray-600" /> {t("workflow_li5")}</li>
-                    <li className="flex items-center gap-3"><div className="w-1.5 h-1.5 bg-gray-600" /> {t("workflow_li6")}</li>
-                  </ul>
-                </div>
-
-              </div>
-            </section>
-
-          </div>
-        </div>
       </div>
       <Footer />
     </main>

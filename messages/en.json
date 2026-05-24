@@ -26,7 +26,6 @@
     
     "cta_install": "Deploy Protocol",
     "cta_manual": "Read Documentation",
-    "manual_title": "User Manual",
     "nav_features": "Architecture",
     "nav_manual": "Docs",
     "nav_github": "GitHub",
@@ -41,74 +40,37 @@
     "project_2_status": "In Development",
     "project_3_title": "MCP Tool Registry",
     "project_3_desc": "The definitive hub for discovering and installing Model Context Protocol servers.",
-    "project_3_status": "Coming Soon"
+    "project_3_status": "Coming Soon",
+
+    "problem_section_title": "The Classic AI Coding Bottlenecks",
+    "problem_section_subtitle": "As projects scale, developers often encounter architectural bottlenecks in how data is fed to AI. This protocol solves three main issues:",
+    "problem_1_title": "Context Size (Context Bloat)",
+    "problem_1_desc": "The longer you chat, the more old code and logs fill up the AI's memory. This causes the AI to hallucinate, forget important variables, and waste API tokens.",
+    "problem_2_title": "Context Loss (Amnesia)",
+    "problem_2_desc": "When the chat gets too slow, you have to start a new one. But then the AI forgets your project structure, database schema, and the bugs you just fixed 5 minutes ago.",
+    "problem_3_title": "Inconsistency (Design Drift)",
+    "problem_3_desc": "If you let the AI design web pages freely, it will invent random CSS classes and use incorrect brand colors, resulting in a messy and inconsistent UI."
   },
   "ManualPage": {
-    "title": "Technical Documentation",
-    "subtitle": "A comprehensive, CMS-grade reference manual for deploying, orchestrating, and mastering the Agent Workflow Framework in enterprise environments.",
+    "title": "User Manual",
+    "subtitle": "Installation and practical usage guide.",
     
-    "menu_problems": "The Context Collapse Crisis",
-    "menu_notebooklm": "Deep Research Architecture",
-    "menu_security": "Enterprise Security Layer",
-    "menu_structure": "System Topology",
-    "menu_guidelines": "Execution Heuristics",
-    "menu_themes": "UI Token Management",
-    "menu_script": "CLI Orchestration",
-    "menu_workflow": "Continuous Lifecycle",
-
-    "problems_title": "The Context Collapse Crisis",
-    "problems_p1": "When engineering software at an enterprise scale utilizing autonomous AI assistants, engineering teams inevitably encounter severe degradation in AI reasoning. This is not a model limitation, but a systemic architectural failure. We define these critical bottlenecks as follows:",
-    "problems_li1": "Context Collapse (The Token Tax): As a chat session elongates, the sheer volume of code, logs, and conversational history overwhelms the LLM's context window. This leads to hallucination, forgotten variables, and exponential API cost inflation without yield.",
-    "problems_li2": "Amnesia (The Handoff Failure): To fix Context Collapse, developers wipe the session. However, this instantly lobotomizes the AI. All micro-decisions, architectural context, bug discoveries, and learned behaviors are completely annihilated.",
-    "problems_li3": "Design Drift (The Entropy Engine): Without hard-coded visual constraints, an AI will attempt to invent new CSS classes, hallucinate Tailwind utility combinations, and ultimately destroy the visual consistency of your application layer.",
-    "problems_p2": "The Agent Workflow Protocol systematically eradicates these failures through a rigidly enforced, persistent state machine:",
-    "problems_sol1": "The STATE.md Engine: We isolate the AI's 'RAM' into a highly-compressed, constantly updating markdown file. The AI reads this single source of truth instead of scraping thousands of lines of conversational history.",
-    "problems_sol2": "Handoff Orchestration: When a session degrades, our scripts compress the current vector and inject it into a pristine, zero-token session, ensuring infinite development loops without memory loss.",
-    "problems_sol3": "RAG Offloading via MCP: Massive API documentation and architecture diagrams are strictly prohibited from the IDE context. They are instead offloaded to Google NotebookLM, queried dynamically via the Model Context Protocol.",
-
-    "notebooklm_title": "Deep Research Architecture (NotebookLM)",
-    "notebooklm_p1": "The greatest mistake in AI-assisted coding is pasting external documentation directly into the IDE prompt. This paralyzes the local agent. Our framework establishes a secure bridge to Google NotebookLM, utilizing it as a dedicated, high-capacity external brain.",
-    "notebooklm_li1": "Token Decoupling: Offloads gigabytes of PDF documentation, API specs, and legacy codebases away from your expensive IDE context window.",
-    "notebooklm_li2": "Laser Focus: By isolating external knowledge, your local agent maintains absolute, unadulterated focus on manipulating the active source code, reducing syntax errors by up to 80%.",
-    "notebooklm_li3": "Semantic Retrieval: Leverages Google's advanced RAG capabilities to instantly fetch complex answers from your external knowledge base exactly when the IDE agent requests it.",
-
-    "security_title": "Enterprise Security Layer",
-    "security_p1": "Granting autonomous read/write access to an AI agent poses significant existential risks to your repository. We implement military-grade safety mechanisms to ensure your code and secrets remain uncompromised.",
-    "security_li1": "OS-Level File Operations: Agents are strictly prohibited from executing raw `rm` or `cat` commands. All file modifications are routed through verified tooling that forces randomized temp-file creation and OS-level write-locks to prevent race conditions or catastrophic overwrites.",
-    "security_li2": "Heuristic Secret Scanning: Pre-commit git hooks actively scan for high-entropy strings, AWS keys, JWT tokens, and `.env` exposures, immediately terminating the agent's execution if a leak is detected.",
-
-    "structure_title": "1. System Topology",
-    "structure_code": "/ (Root Project)\n├── .ai/\n│   ├── STATE.md                    # The Core RAM: Active task state machine\n│   ├── REFLECTIONS.md              # Historical Database: Bug fixes & critical learnings\n│   ├── DECISIONS.md                # Architecture Decision Records (ADRs)\n│   ├── templates/                  # Boilerplate blueprints for rapid scaffolding\n│   ├── prompts/                    # Bootstrap instructions for session instantiation\n│   └── docs/                       # Hyper-compressed project knowledge base\n├── ai-protocol.sh                   # The CLI Orchestration Engine\n└── SKILL.md                         # The Prime Directive: Core agent ruleset",
-
-    "guidelines_title": "2. Execution Heuristics",
-    "guidelines_h3_1": "Strict Execution & Safety",
-    "guidelines_li1": "API Contract-First Methodology: Agents must verify and establish strict schema definitions before writing backend or frontend implementations.",
-    "guidelines_li2": "Test-Driven Development (TDD): Any logic exceeding standard complexity requires the agent to draft and execute test suites prior to integrating the code into the main branch.",
-    "guidelines_li3": "Zero-Trust Security: Hardcoded secrets or credentials within the codebase are strictly prohibited. Agents must rely exclusively on environment variable injection and secure vaults.",
-    "guidelines_h3_2": "Memory Management Protocol",
-    "guidelines_li4": "Mandatory Initialization: Upon any session boot, the agent's first action must be reading the `.ai/STATE.md` file. Failure to do so results in protocol violation.",
-    "guidelines_li5": "Architectural Logging: Any significant shift in architecture, library choice, or database schema must be immediately logged inside `.ai/DECISIONS.md`.",
-
-    "themes_title": "3. UI Token Management",
-    "themes_p1": "Visual consistency is managed by the `.ai/templates/ui/` directory. By locking the design system into a markdown template, the AI is constrained to a specific set of design tokens.",
-    "themes_li1": "Futuristic: Dark mode, heavy glassmorphism, glowing auras, space-themed aesthetics. (Default)",
-    "themes_li2": "Data Heavy: Inspired by Tremor.so. Clean tables, minimal borders, optimized for dense data visualization and dashboards.",
-    "themes_li3": "Minimal: Inspired by Vercel. Pure black & white, extremely high contrast, stark typography, zero gradients.",
-    "themes_li4": "Vibrant: Inspired by HeroUI. Colorful, soft rounded corners, dynamic micro-animations, highly engaging.",
-    "themes_code": "# Command to switch the global UI theme constraints\ncp .ai/templates/ui/minimal.md .ai/docs/ui_guidelines.md",
-
-    "script_title": "4. CLI Orchestration Engine",
-    "script_p1": "The `ai-protocol.sh` script is the beating heart of the framework. It provides a suite of CLI tools designed to manage the agent lifecycle effortlessly.",
-    "script_code": "# Execute a full sweep of safety diagnostics and linting\n./ai-protocol.sh check\n\n# Safely archive the current STATE.md and prepare a clean slate\n./ai-protocol.sh clean\n\n# Compile the ultimate session handoff prompt to avoid Amnesia\n./ai-protocol.sh handoff",
-
-    "workflow_title": "5. Continuous Lifecycle",
-    "workflow_h3_1": "Phase 1: Bootstrapping a Session",
-    "workflow_li1": "Load the initialization prompt located at `.ai/prompts/01-session-start.md`.",
-    "workflow_li2": "Inject these exact instructions into a fresh, empty AI session within your IDE.",
-    "workflow_li3": "The agent will automatically locate, read, and internalize `STATE.md`, resuming work precisely where the previous session ended.",
-    "workflow_h3_2": "Phase 2: Session Termination & Handoff",
-    "workflow_li4": "When the context window begins to bloat and response times degrade, immediately run `./ai-protocol.sh handoff` in your terminal.",
-    "workflow_li5": "Destroy the bloated, degraded IDE session without hesitation.",
-    "workflow_li6": "Copy the newly generated handoff manifest and use it to bootstrap Phase 1, creating an infinite, lossless development loop."
+    "install_title": "1. Installation",
+    "install_desc": "Copy the protocol files into the root of your project directory.",
+    
+    "core_commands_title": "2. Core Commands",
+    "cmd_check_title": "Check Environment",
+    "cmd_check_desc": "Scans files for anomalies and checks for exposed .env secrets before committing.",
+    "cmd_clean_title": "Clean State",
+    "cmd_clean_desc": "Archives the old STATE.md file to start fresh.",
+    "cmd_handoff_title": "Session Handoff",
+    "cmd_handoff_desc": "Summarizes the current work state so you can open a new chat session without the AI forgetting the context.",
+    
+    "structure_title": "3. Folder Structure",
+    
+    "workflow_title": "4. Daily Workflow",
+    "workflow_1": "Start: Open a new chat session. Tell the AI to read the STATE.md file to understand current tasks.",
+    "workflow_2": "Work: Let the AI write code and update the STATE.md file as progress is made.",
+    "workflow_3": "Handoff: When the chat gets slow, run the handoff command. Use the generated summary in a brand new chat."
   }
 }
