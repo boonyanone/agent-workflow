@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { IBM_Plex_Sans_Thai_Looped } from "next/font/google";
 import "../globals.css";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
+const ibm = IBM_Plex_Sans_Thai_Looped({
+  variable: "--font-ibm",
+  subsets: ["latin", "thai"],
+  weight: ["100", "200", "300", "400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -34,8 +35,13 @@ export default async function RootLayout({
   return (
     <html lang={locale} className="scroll-smooth">
       <body
-        className={`${inter.variable} font-sans bg-slate-50 dark:bg-indigo-950 text-slate-800 dark:text-slate-200 transition-colors duration-300`}
+        className={`${ibm.variable} font-sans bg-black text-slate-200 transition-colors duration-300 relative`}
       >
+        <div className="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
+          <div className="absolute -top-[20%] -left-[10%] w-[50%] h-[50%] bg-blue-900/30 rounded-full blur-[120px] mix-blend-screen animate-blob"></div>
+          <div className="absolute top-[20%] -right-[10%] w-[50%] h-[50%] bg-purple-900/30 rounded-full blur-[120px] mix-blend-screen animate-blob animation-delay-2000"></div>
+          <div className="absolute -bottom-[20%] left-[20%] w-[60%] h-[60%] bg-cyan-900/20 rounded-full blur-[150px] mix-blend-screen animate-blob animation-delay-4000"></div>
+        </div>
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>
