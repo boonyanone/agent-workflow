@@ -14,6 +14,7 @@
   --font-sans: var(--font-ibm), ui-sans-serif, system-ui, sans-serif;
   
   --animate-blob: blob 10s infinite alternate;
+  --animate-spin-slow: spin 4s linear infinite;
 }
 
 @layer utilities {

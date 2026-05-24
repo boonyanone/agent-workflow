@@ -34,50 +34,60 @@ export default function AnimatedTerminal() {
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: 0.6 }}
-      className="w-full max-w-3xl mx-auto mt-20 text-left rounded-lg overflow-hidden border border-[#333] shadow-2xl shadow-black/80 bg-[#0a0a0a]"
+      className="w-full mx-auto relative group"
     >
-      {/* Terminal Header */}
-      <div className="flex items-center px-4 py-3 bg-[#000000] border-b border-[#333]">
-        <div className="flex gap-2">
-          <div className="w-3 h-3 rounded-full bg-red-500"></div>
-          <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-          <div className="w-3 h-3 rounded-full bg-green-500"></div>
-        </div>
-        <div className="mx-auto text-xs font-mono text-gray-500 tracking-widest">
-          agent-protocol — bash
-        </div>
+      {/* Glowing Rotating Border Wrapper */}
+      <div className="absolute -inset-[2px] rounded-xl overflow-hidden opacity-80 group-hover:opacity-100 transition-opacity duration-500">
+        <div className="absolute inset-[-50%] animate-spin-slow" style={{
+          background: 'conic-gradient(from 0deg, transparent 0%, #3b82f6 20%, #a855f7 40%, #06b6d4 60%, transparent 80%)'
+        }}></div>
       </div>
 
-      {/* Terminal Body */}
-      <div className="p-6 font-mono text-sm sm:text-base leading-relaxed h-[320px] overflow-hidden relative">
-        <div className="space-y-2">
-          {lines.slice(0, visibleLines).map((line, idx) => (
+      {/* Terminal Container */}
+      <div className="relative rounded-xl overflow-hidden shadow-2xl shadow-black/80 bg-[#0a0a0a] z-10 h-full">
+        {/* Terminal Header */}
+        <div className="flex items-center px-4 py-3 bg-[#000000] border-b border-[#333]">
+          <div className="flex gap-2">
+            <div className="w-3 h-3 rounded-full bg-red-500"></div>
+            <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+            <div className="w-3 h-3 rounded-full bg-green-500"></div>
+          </div>
+          <div className="mx-auto text-xs font-mono text-gray-500 tracking-widest">
+            agent-protocol — bash
+          </div>
+        </div>
+
+        {/* Terminal Body */}
+        <div className="p-6 font-mono text-sm sm:text-base leading-relaxed h-[360px] overflow-hidden relative">
+          <div className="space-y-2">
+            {lines.slice(0, visibleLines).map((line, idx) => (
+              <motion.div 
+                key={idx}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.2 }}
+              >
+                {line.text.startsWith(">") ? (
+                  <span className="text-white font-bold">{line.text}</span>
+                ) : line.text.includes("[System]") ? (
+                  <span className="text-gray-400"><span className="text-blue-400">[System]</span> {line.text.replace("[System] ", "")}</span>
+                ) : line.text.includes("[Design System]") ? (
+                  <span className="text-gray-400"><span className="text-purple-400">[Design System]</span> {line.text.replace("[Design System] ", "")}</span>
+                ) : line.text.includes("[Security]") ? (
+                  <span className="text-gray-400"><span className="text-red-400">[Security]</span> {line.text.replace("[Security] ", "")}</span>
+                ) : (
+                  <span className="text-gray-400">{line.text}</span>
+                )}
+              </motion.div>
+            ))}
+            
+            {/* Blinking Cursor */}
             <motion.div 
-              key={idx}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.2 }}
-            >
-              {line.text.startsWith(">") ? (
-                <span className="text-white font-bold">{line.text}</span>
-              ) : line.text.includes("[System]") ? (
-                <span className="text-gray-400"><span className="text-blue-400">[System]</span> {line.text.replace("[System] ", "")}</span>
-              ) : line.text.includes("[Design System]") ? (
-                <span className="text-gray-400"><span className="text-purple-400">[Design System]</span> {line.text.replace("[Design System] ", "")}</span>
-              ) : line.text.includes("[Security]") ? (
-                <span className="text-gray-400"><span className="text-red-400">[Security]</span> {line.text.replace("[Security] ", "")}</span>
-              ) : (
-                <span className="text-gray-400">{line.text}</span>
-              )}
-            </motion.div>
-          ))}
-          
-          {/* Blinking Cursor */}
-          <motion.div 
-            animate={{ opacity: [1, 0, 1] }}
-            transition={{ duration: 0.8, repeat: Infinity, ease: "linear" }}
-            className={`inline-block w-2.5 h-5 bg-white align-middle ml-2 ${isTyping ? "mt-2" : ""}`}
-          />
+              animate={{ opacity: [1, 0, 1] }}
+              transition={{ duration: 0.8, repeat: Infinity, ease: "linear" }}
+              className={`inline-block w-2.5 h-5 bg-white align-middle ml-2 ${isTyping ? "mt-2" : ""}`}
+            />
+          </div>
         </div>
       </div>
     </motion.div>
