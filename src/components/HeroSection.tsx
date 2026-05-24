@@ -1,116 +1,87 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Copy, TerminalSquare, ArrowRight, Check } from "lucide-react";
+import { Terminal, Copy, Check, ArrowRight } from "lucide-react";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
+import { Link } from "../i18n/routing";
 
 export default function HeroSection() {
+  const t = useTranslations("HomePage");
   const [copied, setCopied] = useState(false);
 
-  const copyCommand = () => {
-    navigator.clipboard.writeText("git clone https://github.com/boonyanone/ai-coding-protocol.git");
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText("./ai-protocol.sh install-mcp");
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
 
   return (
-    <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
-      {/* Background glow effects */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-neon-purple/20 blur-[120px] rounded-full pointer-events-none" />
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
-          
-          {/* Text Content */}
-          <motion.div 
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center lg:text-left"
+    <section className="relative pt-32 pb-20 overflow-hidden">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center max-w-3xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 dark:bg-indigo-900/50 text-blue-700 dark:text-blue-300 font-semibold text-sm mb-8"
           >
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-neon-cyan/10 border border-neon-cyan/20 text-neon-cyan text-sm font-medium mb-6">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-neon-cyan opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-neon-cyan"></span>
-              </span>
-              v1.1.13 Available Now
-            </div>
-            
-            <h1 className="text-5xl lg:text-7xl font-extrabold tracking-tight text-white mb-6">
-              Build alongside AI, <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-cyan to-neon-purple">
-                without the chaos.
-              </span>
-            </h1>
-            
-            <p className="text-lg lg:text-xl text-gray-400 mb-8 max-w-2xl mx-auto lg:mx-0">
-              A strict, memory-persistent workflow framework for cursor, windsurf, and cline. 
-              Eliminate context bloat, hallucination, and UI inconsistency forever.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
-              {/* Terminal Command Box */}
-              <div 
-                className="flex items-center justify-between w-full sm:w-auto bg-black/50 border border-glass-border rounded-lg p-1 group hover:border-neon-cyan/50 transition-colors cursor-pointer"
-                onClick={copyCommand}
-              >
-                <div className="flex items-center gap-3 px-4 py-2">
-                  <span className="text-neon-cyan font-mono">$</span>
-                  <code className="text-sm text-gray-300 font-mono select-all">git clone .../ai-coding-protocol</code>
+            <span className="relative flex h-3 w-3">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-blue-500"></span>
+            </span>
+            v0.1.0 Beta is Live
+          </motion.div>
+          
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
+            className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 text-slate-900 dark:text-white"
+          >
+            <span className="bg-gradient-to-tr from-blue-500 to-purple-500 bg-clip-text text-transparent">Stop Context Bloat.</span><br />
+            Start Coding.
+          </motion.h1>
+          
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
+            className="text-xl text-slate-600 dark:text-slate-300 mb-10 leading-relaxed font-medium"
+          >
+            {t("hero_subtitle")}
+          </motion.p>
+          
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-4"
+          >
+            {/* Terminal Command Box */}
+            <div className="relative group w-full sm:w-auto">
+              <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
+              <div className="relative flex items-center justify-between gap-4 bg-slate-900 dark:bg-black/50 backdrop-blur-xl border border-slate-800 dark:border-white/10 px-6 py-4 rounded-2xl shadow-xl w-full sm:w-[400px]">
+                <div className="flex items-center gap-3 overflow-hidden">
+                  <Terminal size={20} className="text-blue-400 flex-shrink-0" />
+                  <code className="text-blue-100 font-mono text-sm truncate">
+                    <span className="text-purple-400">./</span>ai-protocol.sh install-mcp
+                  </code>
                 </div>
-                <button className="p-2 hover:bg-white/10 rounded-md transition-colors text-gray-400 hover:text-white">
+                <button 
+                  onClick={copyToClipboard}
+                  className="p-2 hover:bg-white/10 rounded-xl transition-colors text-slate-400 hover:text-white"
+                >
                   {copied ? <Check size={18} className="text-green-400" /> : <Copy size={18} />}
                 </button>
               </div>
-              
-              <a 
-                href="https://github.com/boonyanone/ai-coding-protocol#readme" 
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center gap-2 px-6 py-3 rounded-lg bg-white text-black font-semibold hover:bg-gray-200 transition-colors w-full sm:w-auto justify-center"
-              >
-                Read Docs <ArrowRight size={18} />
-              </a>
             </div>
-          </motion.div>
 
-          {/* Visual Mockup */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative"
-          >
-            <div className="glass-panel rounded-xl overflow-hidden shadow-2xl border border-glass-border">
-              {/* Mac Window Header */}
-              <div className="flex items-center gap-2 px-4 py-3 bg-white/5 border-b border-glass-border">
-                <div className="flex gap-1.5">
-                  <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
-                  <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
-                  <div className="w-3 h-3 rounded-full bg-green-500/80"></div>
-                </div>
-                <div className="mx-auto flex items-center gap-2 text-xs text-gray-400 font-mono">
-                  <TerminalSquare size={14} /> ai-protocol.sh check
-                </div>
-              </div>
-              
-              {/* Terminal Content */}
-              <div className="p-6 bg-[#050510]/80 font-mono text-sm leading-relaxed">
-                <div className="text-gray-300 mb-2"><span className="text-neon-cyan">~</span> $ ./ai-protocol.sh check</div>
-                <div className="text-gray-400">🤖 Running AI Protocol Compliance Check...</div>
-                <div className="text-green-400 mt-2">✅ .gitignore secures .env files</div>
-                <div className="text-green-400">✅ STATE.md size is optimal (12 lines).</div>
-                <div className="text-green-400">✅ REFLECTIONS.md has 3 entries.</div>
-                <div className="text-white mt-4 font-bold flex items-center gap-2">
-                  <span className="text-xl">🎉</span> All checks passed! Your AI workspace is optimized.
-                </div>
-                <div className="text-gray-300 mt-4 flex items-center">
-                  <span className="text-neon-cyan">~</span> $ <span className="w-2 h-4 bg-gray-400 ml-2 animate-pulse"></span>
-                </div>
-              </div>
-            </div>
+            <Link href="/manual" className="group flex items-center justify-center gap-2 px-8 py-4 rounded-2xl bg-white dark:bg-slate-800 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all w-full sm:w-auto font-bold active:scale-95">
+              {t("cta_manual")}
+              <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+            </Link>
           </motion.div>
-          
         </div>
       </div>
     </section>

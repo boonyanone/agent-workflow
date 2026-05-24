@@ -1,69 +1,73 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { BrainCircuit, PaintRoller, Zap, ArrowRight } from "lucide-react";
-
-const features = [
-  {
-    title: "No More Context Bloat",
-    description: "Instead of feeding the AI your entire codebase, the protocol uses STATE.md to maintain a lightweight, always-accurate RAM of the current task.",
-    icon: <BrainCircuit size={24} className="text-neon-cyan" />,
-    problem: "Chats get too long, slow down, and cost too many tokens.",
-    solution: "A 20-line STATE.md file keeps the AI focused and lightning fast."
-  },
-  {
-    title: "Cure Agent Amnesia",
-    description: "When a chat breaks or gets too long, our One-Click Handoff script packs up the context and sends it to a new session perfectly.",
-    icon: <Zap size={24} className="text-yellow-400" />,
-    problem: "Starting a new chat means the AI forgets your rules and past bugs.",
-    solution: "Seamless handoffs preserve architectural decisions and lessons learned."
-  },
-  {
-    title: "Consistent UI Design",
-    description: "Enforce a Single Source of Truth for your design system. The AI reads your UI guidelines before writing any frontend code.",
-    icon: <PaintRoller size={24} className="text-neon-purple" />,
-    problem: "The AI invents new colors and layouts that break your design.",
-    solution: "Strict design tokens ensure pixel-perfect consistency."
-  }
-];
+import { BrainCircuit, ShieldCheck, FolderSync } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export default function FeaturesSection() {
+  const t = useTranslations("HomePage");
+
+  const features = [
+    {
+      icon: <BrainCircuit size={32} />,
+      title: t("feature_1_title"),
+      description: t("feature_1_desc"),
+      color: "blue"
+    },
+    {
+      icon: <ShieldCheck size={32} />,
+      title: t("feature_2_title"),
+      description: t("feature_2_desc"),
+      color: "purple"
+    },
+    {
+      icon: <FolderSync size={32} />,
+      title: t("feature_3_title"),
+      description: t("feature_3_desc"),
+      color: "indigo"
+    }
+  ];
+
+  const getColorClasses = (color: string) => {
+    switch(color) {
+      case 'blue': return "bg-blue-100 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400 group-hover:bg-blue-500 group-hover:text-white";
+      case 'purple': return "bg-purple-100 text-purple-600 dark:bg-purple-900/30 dark:text-purple-400 group-hover:bg-purple-500 group-hover:text-white";
+      case 'indigo': return "bg-indigo-100 text-indigo-600 dark:bg-indigo-900/30 dark:text-indigo-400 group-hover:bg-indigo-500 group-hover:text-white";
+      default: return "";
+    }
+  };
+
   return (
-    <section id="features" className="py-24 bg-space-900 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="features" className="py-24 relative z-10">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">The Problems We Solve</h2>
-          <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-            Coding with AI is amazing until the context window fills up. We built the protocol to handle the messy parts so you can focus on shipping.
+          <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">
+            Protocol Features
+          </h2>
+          <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto font-medium">
+            Everything you need to build a secure, persistent, and context-aware AI workflow.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <motion.div 
+            <motion.div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.2 }}
-              className="glass-panel p-8 rounded-2xl flex flex-col h-full hover:border-neon-cyan/30 transition-all group"
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="group glass-panel p-8 hover:-translate-y-2 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/10 cursor-default"
             >
-              <div className="w-12 h-12 rounded-xl bg-white/5 border border-glass-border flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 transition-colors duration-300 ${getColorClasses(feature.color)}`}>
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
-              <p className="text-gray-400 mb-8 flex-grow">{feature.description}</p>
-              
-              <div className="bg-black/40 rounded-lg p-4 text-sm border border-glass-border">
-                <div className="flex items-start gap-2 mb-2">
-                  <span className="text-red-400 font-bold">❌</span>
-                  <span className="text-gray-300">{feature.problem}</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <span className="text-green-400 font-bold">✅</span>
-                  <span className="text-white">{feature.solution}</span>
-                </div>
-              </div>
+              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3">
+                {feature.title}
+              </h3>
+              <p className="text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
+                {feature.description}
+              </p>
             </motion.div>
           ))}
         </div>

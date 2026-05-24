@@ -1,40 +1,35 @@
 @import "tailwindcss";
 
 @theme {
-  --color-space-900: #050510;
-  --color-space-800: #0b0f19;
-  --color-space-700: #121826;
-  
-  --color-neon-cyan: #00f0ff;
-  --color-neon-purple: #8b5cf6;
-  --color-neon-blue: #3b82f6;
-
-  --color-glass: rgba(255, 255, 255, 0.03);
-  --color-glass-border: rgba(255, 255, 255, 0.08);
-  
-  --color-background: var(--color-space-900);
-  --color-foreground: #e2e8f0;
+  /* Vibrant Theme Customizations */
+  --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 :root {
-  --background: #050510;
-  --foreground: #e2e8f0;
+  /* You can add custom light mode variables here if needed */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* You can add custom dark mode variables here if needed */
+  }
 }
 
 body {
-  background-color: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-geist-sans), sans-serif;
+  /* Background gradients for the Vibrant look */
   background-image: 
-    radial-gradient(circle at 15% 50%, rgba(139, 92, 246, 0.08) 0%, transparent 50%),
-    radial-gradient(circle at 85% 30%, rgba(0, 240, 255, 0.08) 0%, transparent 50%);
+    radial-gradient(circle at 10% 20%, rgba(59, 130, 246, 0.1) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 40%);
   background-attachment: fixed;
 }
 
-/* Glassmorphism utilities */
+/* Glassmorphism utilities tailored for Vibrant */
 .glass-panel {
-  background: var(--color-glass);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--color-glass-border);
+  @apply backdrop-blur-xl bg-white/60 border border-white/20 shadow-lg shadow-blue-500/10 rounded-3xl;
+}
+
+@media (prefers-color-scheme: dark) {
+  .glass-panel {
+    @apply bg-indigo-950/60 border-indigo-500/20 shadow-purple-500/10;
+  }
 }

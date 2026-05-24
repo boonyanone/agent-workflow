@@ -1,0 +1,32 @@
+{
+  "HomePage": {
+    "title": "Agent Workflow Hub",
+    "hero_title": "Stop Context Bloat. Start Coding.",
+    "hero_subtitle": "ปลดล็อกขีดสุดของ AI Coding Protocol ลดการสูญเสีย Token ใน IDE ด้วยพลังจาก Google NotebookLM (RAG) ให้ AI โฟกัสเฉพาะโค้ดตรงหน้าของคุณ",
+    "feature_1_title": "🧠 Zero-Context Amnesia",
+    "feature_1_desc": "หมดยุคที่ต้องแปะ Document ยาวๆ ลงแชท IDE โปรโตคอลของเราทำงานร่วมกับ NotebookLM เพื่อดึงความรู้โปรเจกต์แบบเรียลไทม์",
+    "feature_2_title": "🔐 Enterprise-Grade Security",
+    "feature_2_desc": "รัน AI ในเครื่องได้อย่างปลอดภัย ด้วยระบบ Symlink Hijacking Protection และ Git Hook ตรวจจับไฟล์ .env อัตโนมัติ",
+    "feature_3_title": "📂 Multi-Project Isolated Auth",
+    "feature_3_desc": "สลับทำงานหลายโปรเจกต์ได้สบายๆ ด้วยระบบ Auth แยกโฟลเดอร์ คุณสามารถใช้ Google Account ที่ต่างกันในแต่ละโปรเจกต์ได้โดยไม่ตีกัน",
+    "cta_install": "ติดตั้ง AI Protocol เลย",
+    "cta_manual": "ดูวิธีการใช้งาน",
+    "manual_title": "คู่มือการใช้งาน",
+    "nav_features": "ฟีเจอร์",
+    "nav_manual": "คู่มือ",
+    "nav_github": "GitHub"
+  },
+  "ManualPage": {
+    "title": "คู่มือการใช้งานแบบละเอียด",
+    "subtitle": "ทุกสิ่งที่คุณต้องรู้เกี่ยวกับการติดตั้งและใช้งาน AI Coding Protocol",
+    "menu_install": "1. การติดตั้ง (Installation)",
+    "menu_auth": "2. การล็อกอิน (Authentication)",
+    "menu_usage": "3. วิธีใช้งาน (Usage)",
+    "install_title": "1. การติดตั้งระบบ",
+    "install_desc": "รันคำสั่งนี้เพื่อติดตั้งโปรโตคอลและ MCP Server เข้าสู่โปรเจกต์ของคุณ",
+    "auth_title": "2. การยืนยันตัวตน (ล็อกอิน)",
+    "auth_desc": "ระบบจะดูดคุกกี้ให้อัตโนมัติในเสี้ยววินาทีเพื่อใช้เชื่อมต่อกับ NotebookLM",
+    "usage_title": "3. วิธีสั่งงาน AI ในแชท",
+    "usage_desc": "พิมพ์สั่งงาน AI โดยระบุชื่อสมุดโน้ต เช่น: \"ช่วยดึงข้อมูลจากสมุดโน้ตชื่อ 'AI Coding Protocol' มาให้หน่อย\""
+  }
+}

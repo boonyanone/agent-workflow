@@ -682,15 +682,18 @@ async function installMcp() {
     }
 
     if (fs.existsSync(mcpDir)) {
-      log('yellow', `⚠️ MCP directory already exists. Pulling latest updates...`);
-      // Reset local changes first, otherwise git pull will abort due to our patches!
-      execFileSync('git', ['reset', '--hard'], { cwd: mcpDir, stdio: 'ignore' });
-      execFileSync('git', ['pull'], { cwd: mcpDir, stdio: 'inherit' });
-    } else {
-      ensureDir(path.join(projectRoot, '.ai', 'mcp'));
-      log('reset', 'Cloning repository...');
-      execFileSync('git', ['clone', 'https://github.com/jackc1111/antigravity-notebooklm-mcp.git', mcpDir], { stdio: 'inherit' });
+      log('yellow', `⚠️ MCP directory already exists. Replacing with the latest bundled version...`);
+      fs.rmSync(mcpDir, { recursive: true, force: true });
     }
+    
+    ensureDir(path.join(projectRoot, '.ai', 'mcp'));
+    const tempMcpDir = path.join(projectRoot, '.ai', 'mcp', 'temp-protocol-repo');
+    if (fs.existsSync(tempMcpDir)) fs.rmSync(tempMcpDir, { recursive: true, force: true });
+
+    log('reset', 'Downloading bundled NotebookLM MCP Server...');
+    execFileSync('git', ['clone', '--depth', '1', 'https://github.com/boonyanone/ai-coding-protocol.git', tempMcpDir], { stdio: 'inherit' });
+    fs.cpSync(path.join(tempMcpDir, 'notebooklm-mcp'), mcpDir, { recursive: true });
+    fs.rmSync(tempMcpDir, { recursive: true, force: true });
     
     // Pre-create the credentials directory as a secure OS-level vault (Defense-in-Depth)
     const authDir = path.join(projectRoot, '.ai', 'mcp', 'auth');

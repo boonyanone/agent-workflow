@@ -1,0 +1,32 @@
+{
+  "HomePage": {
+    "title": "Agent Workflow Hub",
+    "hero_title": "Stop Context Bloat. Start Coding.",
+    "hero_subtitle": "Unlock the full potential of AI Coding Protocol. Reduce Token waste in your IDE powered by Google NotebookLM (RAG), letting your AI focus purely on the code.",
+    "feature_1_title": "🧠 Zero-Context Amnesia",
+    "feature_1_desc": "No more pasting long documents into IDE chats. Our protocol works with NotebookLM to retrieve project knowledge in real-time.",
+    "feature_2_title": "🔐 Enterprise-Grade Security",
+    "feature_2_desc": "Run AI locally with peace of mind. Featuring Symlink Hijacking Protection and automated Git Hooks to detect .env files.",
+    "feature_3_title": "📂 Multi-Project Isolated Auth",
+    "feature_3_desc": "Switch between projects effortlessly. Folder-isolated auth allows you to use different Google Accounts per project without conflict.",
+    "cta_install": "Install AI Protocol",
+    "cta_manual": "Read the Manual",
+    "manual_title": "User Manual",
+    "nav_features": "Features",
+    "nav_manual": "Manual",
+    "nav_github": "GitHub"
+  },
+  "ManualPage": {
+    "title": "Comprehensive Manual",
+    "subtitle": "Everything you need to know about setting up and using the AI Coding Protocol.",
+    "menu_install": "Installation",
+    "menu_auth": "Authentication",
+    "menu_usage": "Usage & Commands",
+    "install_title": "1. Installation",
+    "install_desc": "Install the protocol and MCP server into your workspace.",
+    "auth_title": "2. Authentication",
+    "auth_desc": "Login with your Google account to enable NotebookLM access.",
+    "usage_title": "3. Usage & Commands",
+    "usage_desc": "Use the following commands in your IDE chat to trigger the workflow."
+  }
+}
