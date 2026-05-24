@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Copy, TerminalSquare, ArrowRight, Check } from "lucide-react";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 
 export default function HeroSection() {
   const [copied, setCopied] = useState(false);
@@ -61,12 +62,12 @@ export default function HeroSection() {
                 </button>
               </div>
               
-              <a 
+              <Link 
                 href="/manual" 
                 className="flex items-center gap-2 px-6 py-3 rounded-lg bg-white text-black font-semibold hover:bg-gray-200 transition-colors w-full sm:w-auto justify-center"
               >
                 {t("cta_manual")} <ArrowRight size={18} />
-              </a>
+              </Link>
             </div>
           </motion.div>
 

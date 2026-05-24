@@ -39,7 +39,7 @@ export default async function RootLayout({
   return (
     <html lang={locale} className="scroll-smooth">
       <body
-        className={`${outfit.variable} ${poppins.variable} antialiased font-poppins bg-slate-50 dark:bg-indigo-950 text-slate-800 dark:text-slate-200 transition-colors duration-300`}
+        className={`${outfit.variable} ${poppins.variable} antialiased font-outfit bg-slate-50 dark:bg-indigo-950 text-slate-800 dark:text-slate-200 transition-colors duration-300`}
       >
         <NextIntlClientProvider messages={messages}>
           {children}
