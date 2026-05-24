@@ -1,87 +1,89 @@
 {
   "HomePage": {
     "title": "Agent Workflow Hub",
-    "hero_title": "Stop Context Bloat. Start Coding.",
-    "hero_subtitle": "โปรโตคอลการเขียนโค้ดด้วย AI ทำงานร่วมกับ Google NotebookLM (RAG) ช่วยลดการใช้ Token ใน IDE และให้ AI มุ่งเน้นไปที่โค้ด",
+    "hero_title": "บอกลาบริบทล้นจอ เริ่มโค้ดได้เลย",
+    "hero_subtitle": "โปรโตคอลการเขียนโค้ดด้วย AI ที่ทำงานร่วมกับ Google NotebookLM (RAG) มอบความจำถาวร ความสม่ำเสมอ และสมองกลอัจฉริยะส่วนตัวให้กับ Agent ของคุณ",
     
-    "feature_1_title": "Robust Authentication",
-    "feature_1_desc": "ระบบยืนยันตัวตนผ่าน Browser Auth สามารถทำงานข้ามระบบป้องกัน Bot ได้อย่างปลอดภัย",
+    "feature_1_title": "1. ความจำแม่นยำ (Context Persistence)",
+    "feature_1_desc": "แทนที่จะโยนโค้ดทั้งโปรเจกต์ให้ AI อ่านทุกครั้ง โปรโตคอลนี้ใช้ไฟล์ STATE.md เพื่อจำลอง RAM ขนาดเล็กที่แม่นยำ ทำให้ส่งไม้ต่อระหว่างเซสชันแชทได้อย่างไร้รอยต่อ",
     
-    "feature_2_title": "Deep Research Agent",
-    "feature_2_desc": "บอทค้นหาข้อมูลอัตโนมัติบนเว็บและนำเข้าข้อมูลเข้าสู่ NotebookLM ให้ทันที",
+    "feature_2_title": "2. ดีไซน์คงที่ (UI Consistency)",
+    "feature_2_desc": "สร้างแหล่งอ้างอิงกลาง (Single Source of Truth) สำหรับ Design System ของคุณ AI จะต้องอ่านคู่มือ UI ก่อนเขียนโค้ด Frontend เสมอ เพื่อให้ได้งานที่เป๊ะตามที่คุณวางไว้",
     
-    "feature_3_title": "Notebook Management",
-    "feature_3_desc": "คำสั่งจัดการสมุดโน้ตเต็มรูปแบบ รวมถึงการตั้งค่าเป้าหมาย (Goals) และ Prompts สำหรับแต่ละโน้ต",
+    "feature_3_title": "3. เชื่อมต่อฐานข้อมูล (Deep Knowledge Base)",
+    "feature_3_desc": "ลดภาระการจำโดยโยนเอกสารคู่มือต่างๆ ให้ Google NotebookLM จัดการผ่าน MCP Server ช่วยประหยัด IDE Token ได้มหาศาล เพราะ AI จะเลือกค้นหาเฉพาะตอนที่จำเป็นเท่านั้น",
     
-    "feature_4_title": "Advanced Source Control",
-    "feature_4_desc": "รองรับการเพิ่ม Text, URLs, PDFs และไฟล์จาก Google Drive พร้อมระบบ Sync ข้อมูลล่าสุด",
-    
-    "feature_5_title": "Studio & Artifacts",
-    "feature_5_desc": "สั่ง AI สร้าง Audio Overviews (พอดแคสต์), Mind Maps, Quizzes และ Study Guides ได้ทันที",
-    
-    "feature_6_title": "Atomic Security & Git Guard",
-    "feature_6_desc": "ระบบป้องกันการทำงานผิดพลาดของบอท ป้องกัน Symlink Hijacking และดักจับไฟล์ .env ไม่ให้หลุดเข้า Git",
+    "feature_4_title": "4. ปลอดภัยสูงสุด (Absolute Security)",
+    "feature_4_desc": "มี Git Hooks ในตัวเพื่อคอยสแกนไฟล์ .env ป้องกันรหัสหลุดออกสู่ภายนอก และระบบล็อกไฟล์ระดับ Enterprise ป้องกันไม่ให้ AI อัตโนมัติเผลอเขียนไฟล์ทับหรือทำลาย Symlink ของคุณ",
     
     "cta_install": "ติดตั้ง AI Protocol",
     "cta_manual": "อ่านคู่มือการใช้งาน",
-    "manual_title": "คู่มือการใช้งาน",
-    "nav_features": "ฟีเจอร์",
+    "manual_title": "คู่มือผู้ใช้",
+    "nav_features": "คุณสมบัติ",
     "nav_manual": "คู่มือ",
     "nav_github": "GitHub"
   },
   "ManualPage": {
-    "title": "คู่มือการใช้งานแบบละเอียด",
-    "subtitle": "ข้อมูลสถาปัตยกรรม วิธีการติดตั้ง และการเรียกใช้งานเครื่องมือทั้งหมดในระบบ",
+    "title": "คู่มือและเอกสารการใช้งาน",
+    "subtitle": "ทุกสิ่งที่คุณต้องรู้เพื่อใช้ Agentic Workflow Protocol อย่างโปร เรียนรู้วิธีตั้งค่า Agent จัดการสถานะ และดึงพลังจาก NotebookLM MCP ออกมาใช้แบบเต็มพิกัด",
     
-    "menu_intro": "1. ภาพรวมระบบ",
+    "menu_intro": "1. ภาพรวมสถาปัตยกรรม",
     "menu_install": "2. การติดตั้ง",
     "menu_auth": "3. การยืนยันตัวตน",
     "menu_usage": "4. ตั้งค่า Claude Desktop",
-    "menu_tools": "5. เครื่องมือที่มีให้",
-    "menu_notes": "6. ข้อควรระวัง",
+    "menu_tools": "5. รายละเอียดเครื่องมือ MCP",
 
-    "intro_title": "1. ภาพรวมสถาปัตยกรรม (Architecture)",
-    "intro_desc": "โปรเจกต์นี้ทำงานโดยใช้ Reverse-engineered RPC Client เชื่อมต่อตรงกับ NotebookLM และถูกห่อหุ้มด้วย MCP Server เพื่อให้ AI Agent สามารถเรียกใช้งานได้ มีระบบ Orchestrator ตรงกลางเพื่อจัดการงานที่ต้องใช้เวลานาน (เช่น Deep Research หรือ Audio Generation) ช่วยให้บอทสามารถรอดึงข้อมูลได้โดยไม่เกิด Timeout",
+    "intro_title": "1. ภาพรวมสถาปัตยกรรม",
+    "intro_desc": "Agent Workflow Protocol ผสมผสานระบบจัดการสถานะในเครื่อง (.ai directory) เข้ากับสมองกลอัจฉริยะภายนอก (NotebookLM MCP Server) โดยมี Orchestrator ทำหน้าที่เป็นสะพานเชื่อมที่ปลอดภัยระหว่าง IDE Agent (Cursor, Windsurf, Cline) ของคุณกับระบบ RAG บนคลาวด์",
 
-    "install_title": "2. การติดตั้งระบบ (Installation)",
-    "install_desc": "คุณต้องโคลนโปรเจกต์และติดตั้ง Dependencies เพื่อรันเซิร์ฟเวอร์",
-    "install_cmd_1": "npm install",
-    "install_cmd_2": "npm run build",
+    "install_title": "2. การติดตั้ง",
+    "install_desc": "รันสคริปต์เริ่มต้นในโฟลเดอร์โปรเจกต์ของคุณเพื่อติดตั้งสภาพแวดล้อมโปรโตคอล",
+    "install_cmd_1": "./ai-protocol.sh init",
+    "install_cmd_2": "./ai-protocol.sh install-mcp",
 
-    "auth_title": "3. การยืนยันตัวตน (Authentication)",
-    "auth_desc": "ระบบต้องการ Cookie เพื่อเข้าถึง NotebookLM ซึ่งสามารถทำได้ 2 วิธี:",
-    "auth_sub_1": "วิธีที่ 1: Browser Auth (แนะนำ)",
-    "auth_sub_1_desc": "รันสคริปต์อัตโนมัติ ระบบจะเปิดเบราว์เซอร์ Chrome ขึ้นมาให้คุณล็อกอิน Google ด้วยตัวเอง เมื่อล็อกอินเสร็จ ระบบจะดูด Cookie ไปเก็บไว้ให้โดยอัตโนมัติ",
-    "auth_cmd_1": "node build/browser-auth.js",
-    "auth_sub_2": "วิธีที่ 2: Manual Token (สำหรับ Headless Server)",
-    "auth_sub_2_desc": "ถ้าคุณรันบนเซิร์ฟเวอร์ที่ไม่มีหน้าจอ ให้เปิด NotebookLM บนเบราว์เซอร์ของคุณเอง เปิด DevTools (Network tab) แล้วคัดลอกค่า Cookie มาใช้กับคำสั่ง authenticate ในแชท",
+    "auth_title": "3. การยืนยันตัวตน",
+    "auth_desc": "ก่อนใช้งาน MCP Tools คุณต้องยืนยันตัวตนบัญชี Google ของคุณ เพื่อให้เซิร์ฟเวอร์สามารถเข้าถึง Notebooks ของคุณได้",
+    "auth_sub_1": "การยืนยันตัวตนผ่านเบราว์เซอร์อัตโนมัติ",
+    "auth_sub_1_desc": "สคริปต์นี้จะเปิดเบราว์เซอร์ Chrome ขึ้นมา เพียงคุณล็อกอินเข้า Google ระบบก็จะดูด Session Cookie มาเก็บไว้ในไฟล์ auth.json อย่างปลอดภัย",
+    "auth_cmd_1": "./ai-protocol.sh auth-mcp",
 
-    "usage_title": "4. การตั้งค่า Claude Desktop (Usage)",
-    "usage_desc": "คุณต้องเพิ่มการตั้งค่านี้ในไฟล์ claude_desktop_config.json เพื่อให้ Claude สามารถเรียกใช้ MCP Server ตัวนี้ได้",
+    "usage_title": "4. การตั้งค่า Claude Desktop",
+    "usage_desc": "หากคุณใช้ Claude Desktop App คุณสามารถตั้งค่าให้รัน MCP Server อัตโนมัติได้ โดยเพิ่มโค้ดนี้ลงในไฟล์ claude_desktop_config.json:",
 
-    "tools_title": "5. เครื่องมือที่มีให้เรียกใช้ (Available Tools)",
-    "tools_desc": "เมื่อติดตั้งสำเร็จ AI Agent ของคุณจะมีคำสั่งเหล่านี้เพิ่มขึ้นมา:",
+    "tools_title": "5. รายละเอียดเครื่องมือ MCP (Tools Reference)",
+    "tools_desc": "เมื่อ MCP Server ทำงานแล้ว AI Agent ของคุณจะสามารถเรียกใช้เครื่องมือเหล่านี้เพื่อสื่อสารกับ NotebookLM ได้โดยตรง",
     
+    "tool_what": "มันคืออะไร:",
+    "tool_how": "ทำงานอย่างไร:",
+    "tool_usage": "เหมาะใช้ตอนไหน:",
+    "tool_result": "ผลลัพธ์ที่ได้:",
+
     "tool_1_name": "manage_notebook",
-    "tool_1_desc": "จัดการวงจรชีวิตของสมุดโน้ต (สร้าง, ลบ, แก้ไขชื่อ) และคำสั่ง configure_chat สำหรับตั้งค่าเป้าหมายของบอท",
-    
-    "tool_2_name": "manage_source",
-    "tool_2_desc": "จัดการแหล่งข้อมูล เพิ่มไฟล์/URL และคำสั่ง sync สำหรับดึงข้อมูลล่าสุดจาก Google Drive",
-    
-    "tool_3_name": "manage_studio",
-    "tool_3_desc": "จัดการไฟล์สื่อที่ถูกสร้างขึ้น (List / Delete) เพื่อเคลียร์พื้นที่โปรเจกต์",
-    
-    "tool_4_name": "query_notebook",
-    "tool_4_desc": "สั่งให้ AI อ่านและวิเคราะห์ข้อมูลทั้งหมดที่อยู่ในสมุดโน้ต เพื่อตอบคำถามเชิงลึก",
-    
-    "tool_5_name": "perform_deep_research",
-    "tool_5_desc": "สั่งให้บอทค้นหาข้อมูลบนอินเทอร์เน็ตแบบเจาะลึกหลายขั้นตอน และนำเข้าเนื้อหาที่ได้กลับเข้าสมุดโน้ต",
-    
-    "tool_6_name": "generate_artifact",
-    "tool_6_desc": "แปลงโน้ตเป็นสื่อรูปแบบอื่น เช่น Audio (Podcast), Quiz, Slides หรือ Mind Map",
+    "tool_1_desc": "เครื่องมือจัดการวงจรชีวิตของ AI Notebooks",
+    "tool_1_what": "เครื่องมือสำหรับ สร้าง เปลี่ยนชื่อ ลบ หรือปรับแต่ง Notebook",
+    "tool_1_how": "ส่งคำสั่ง RPC ไปที่ระบบหลังบ้านของ Google เพื่ออัปเดตสถานะของ Notebook คำสั่ง 'configure_chat' จะช่วยฝัง System Prompt ลงไปในสมุดโน้ต",
+    "tool_1_usage": "ใช้ตอนเริ่มโปรเจกต์หรือโมดูลใหม่ เพื่อสร้างฐานข้อมูลความรู้ที่แยกออกมาเฉพาะเรื่อง",
+    "tool_1_result": "คืนค่า ID ของ Notebook ที่เพิ่งถูกสร้างหรือแก้ไข",
 
-    "notes_title": "6. ข้อควรระวัง (Notes)",
-    "notes_desc_1": "คำสั่ง Deep Research อาจใช้เวลา 3-5 นาที เซิร์ฟเวอร์จะคอยเช็กสถานะให้ โปรดรอสักครู่",
-    "notes_desc_2": "การสร้าง Audio Generation ค่อนข้างกินทรัพยากร ตรวจสอบให้แน่ใจว่าในสมุดโน้ตมี Source ข้อมูลเพียงพอก่อนสั่งสร้าง"
+    "tool_2_name": "manage_source",
+    "tool_2_desc": "อัดฉีดความรู้ลงใน Notebook ของคุณ",
+    "tool_2_what": "เครื่องมือสำหรับอัปโหลดไฟล์ในเครื่อง ลิงก์ URL หรือซิงค์เอกสารจาก Google Drive",
+    "tool_2_how": "อัปโหลดข้อความหรือไฟล์ Markdown เข้าสู่ระบบกลืนข้อมูลของ NotebookLM และสร้าง Source ID ออกมา",
+    "tool_2_usage": "ใช้เมื่อมีลิงก์ API ใหม่ หรือเมื่อมีการตัดสินใจเรื่อง Architecture ก็สั่งให้ AI นำไปเก็บเป็นหลักฐานใน Notebook ได้เลย",
+    "tool_2_result": "ระบบจะวิเคราะห์เนื้อหาและทำให้ AI สามารถค้นหาเอกสารนั้นๆ ได้",
+
+    "tool_3_name": "query_notebook",
+    "tool_3_desc": "เครื่องมือหลักสำหรับดึงข้อมูล (RAG Queries)",
+    "tool_3_what": "เครื่องมือที่ให้ AI สั่งค้นหาและถามคำถาม โดยอ้างอิงจากแหล่งข้อมูลใน Notebook เท่านั้น",
+    "tool_3_how": "ใช้ความสามารถในการสร้างเนื้อหาแบบมีฐานข้อมูลอ้างอิง (Grounded Generation) ของ NotebookLM หากระบุ Source ID ด้วย จะเป็นการจำกัดกรอบการค้นหาเฉพาะในเอกสารนั้น",
+    "tool_3_usage": "ใช้เมื่อ AI ต้องเจอกับ API หรือระบบที่ไม่รู้จัก แทนที่จะเดาสุ่มหรือค้นเว็บ ก็ให้มันมาถาม Notebook แทน",
+    "tool_3_result": "ได้รับคำตอบที่ละเอียดและถูกต้องตามความจริง พร้อมทั้งอ้างอิง (Citations) ชี้เป้าว่าเอามาจากเอกสารส่วนไหน",
+
+    "tool_4_name": "generate_artifact",
+    "tool_4_desc": "แปลงข้อความให้เป็นสื่อมัลติมีเดีย (Audio/Visual Assets)",
+    "tool_4_what": "สั่งให้ Studio Engine สร้างรายการพอดแคสต์ (Audio Overviews) แบบทดสอบ หรือคู่มือสรุปย่อ",
+    "tool_4_how": "ทริกเกอร์ระบบงานหลังบ้านแบบรอนาน (Async Job) แล้วตัว Orchestrator จะคอยตรวจสอบสถานะจนกว่าจะเสร็จ",
+    "tool_4_usage": "หลังจากจดสรุปการประชุมเสร็จ คุณสามารถสั่งให้ AI สร้างเป็นพอดแคสต์เพื่อเอาไปเปิดฟังตอนขับรถกลับบ้านได้",
+    "tool_4_result": "ได้รับลิงก์ URL หรือไฟล์สื่อมัลติมีเดียที่สั่งทำไว้"
   }
 }
