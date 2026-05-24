@@ -3,8 +3,9 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useTranslations } from "next-intl";
-import { Copy, Check } from "lucide-react";
+import { Copy, Check, MessageSquare, Terminal } from "lucide-react";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function ManualPage() {
   const t = useTranslations("ManualPage");
@@ -16,10 +17,13 @@ export default function ManualPage() {
     setTimeout(() => setCopiedCmd(null), 2000);
   };
 
+  // Reusable component for BASH commands
   const CodeBlock = ({ command, multiline = false }: { command: string, multiline?: boolean }) => (
     <div className="relative w-full bg-[#111] border border-[#333] rounded overflow-hidden my-4">
       <div className="flex items-center justify-between px-4 py-2 bg-[#050505] border-b border-[#333]">
-        <div className="text-xs font-mono text-gray-500">BASH</div>
+        <div className="flex items-center gap-2 text-xs font-mono text-gray-500">
+          <Terminal size={14} /> BASH
+        </div>
         <button 
           onClick={() => copyCommand(command)}
           className="text-gray-500 hover:text-white transition-colors"
@@ -38,6 +42,28 @@ export default function ManualPage() {
             <code className="text-sm text-gray-300 font-mono whitespace-nowrap">{command}</code>
           </div>
         )}
+      </div>
+    </div>
+  );
+
+  // Reusable component for AI Prompts
+  const PromptBlock = ({ prompt }: { prompt: string }) => (
+    <div className="relative w-full bg-blue-950/20 border border-blue-900/50 rounded overflow-hidden my-4">
+      <div className="flex items-center justify-between px-4 py-2 bg-blue-950/40 border-b border-blue-900/50">
+        <div className="flex items-center gap-2 text-xs font-bold text-blue-400 uppercase tracking-wider">
+          <MessageSquare size={14} /> AI Prompt
+        </div>
+        <button 
+          onClick={() => copyCommand(prompt)}
+          className="text-blue-500 hover:text-blue-300 transition-colors"
+        >
+          {copiedCmd === prompt ? <Check size={14} className="text-green-500" /> : <Copy size={14} />}
+        </button>
+      </div>
+      <div className="p-4 overflow-x-auto">
+        <p className="text-sm text-blue-100/80 leading-relaxed italic border-l-2 border-blue-500 pl-4 py-1">
+          "{prompt}"
+        </p>
       </div>
     </div>
   );
@@ -73,10 +99,22 @@ export default function ManualPage() {
             </div>
           </aside>
 
-          {/* Main Content Area - Plain Text Style */}
+          {/* Main Content Area */}
           <div className="flex-1 max-w-3xl">
             <article className="prose prose-invert prose-p:text-gray-300 prose-headings:text-white max-w-none space-y-16">
               
+              {/* Architecture Image at the top of content */}
+              <div className="mb-16 border border-[#333] rounded-xl overflow-hidden bg-[#050505] p-2">
+                <Image 
+                  src="/architecture.jpg" 
+                  alt="Agentic Workflow Architecture" 
+                  width={1200} 
+                  height={675}
+                  className="w-full h-auto rounded-lg object-contain"
+                  priority
+                />
+              </div>
+
               {/* Sec 1 */}
               <section id="sec1" className="scroll-mt-32">
                 <h2 className="text-2xl font-bold text-white mb-4">{t("sec_1_title")}</h2>
@@ -100,22 +138,51 @@ export default function ManualPage() {
 
               {/* Sec 2 */}
               <section id="sec2" className="scroll-mt-32">
-                <h2 className="text-2xl font-bold text-white mb-4">{t("sec_2_title")}</h2>
-                <p className="mb-4 text-gray-400 leading-relaxed">{t("sec_2_desc")}</p>
-                <CodeBlock command={t("sec_2_cmd_1")} />
-                <p className="mt-4 text-sm text-gray-400">{t("sec_2_note")}</p>
+                <h2 className="text-2xl font-bold text-white mb-6">{t("sec_2_title")}</h2>
+                <p className="mb-8 text-gray-400 leading-relaxed">{t("sec_2_desc")}</p>
+                
+                <div className="space-y-8 mb-8 border-l-2 border-[#333] pl-6">
+                  <div>
+                    <h3 className="text-lg font-bold text-white mb-2">{t("sec_2_tpl_1_title")}</h3>
+                    <p className="text-gray-400 mb-2">{t("sec_2_tpl_1_desc")}</p>
+                    <CodeBlock command={t("sec_2_tpl_1_cmd")} />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-white mb-2">{t("sec_2_tpl_2_title")}</h3>
+                    <p className="text-gray-400 mb-2">{t("sec_2_tpl_2_desc")}</p>
+                    <CodeBlock command={t("sec_2_tpl_2_cmd")} />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-white mb-2">{t("sec_2_tpl_3_title")}</h3>
+                    <p className="text-gray-400 mb-2">{t("sec_2_tpl_3_desc")}</p>
+                    <CodeBlock command={t("sec_2_tpl_3_cmd")} />
+                  </div>
+                </div>
+
+                <div className="mt-10">
+                  <h3 className="text-xl font-bold text-white mb-3">{t("sec_2_prompt_title")}</h3>
+                  <p className="text-gray-400 mb-4">{t("sec_2_prompt_desc")}</p>
+                  <PromptBlock prompt={t("sec_2_prompt_code")} />
+                </div>
               </section>
 
               {/* Sec 3 */}
               <section id="sec3" className="scroll-mt-32">
                 <h2 className="text-2xl font-bold text-white mb-4">{t("sec_3_title")}</h2>
-                <p className="mb-4 text-gray-400 leading-relaxed">{t("sec_3_desc")}</p>
-                <ol className="list-decimal pl-6 space-y-3">
-                  <li>{t("sec_3_step_1")}</li>
-                  <li>{t("sec_3_step_2")}</li>
-                  <li>{t("sec_3_step_3")}</li>
-                  <li>{t("sec_3_step_4")}</li>
-                </ol>
+                <p className="mb-6 text-gray-400 leading-relaxed">{t("sec_3_desc")}</p>
+                <div className="space-y-8">
+                  <div>
+                    <h3 className="text-lg font-medium text-white mb-2">{t("sec_3_step_1")}</h3>
+                    <PromptBlock prompt={t("sec_3_prompt_start")} />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-medium text-white mb-2">{t("sec_3_step_2")}</h3>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-medium text-white mb-2">{t("sec_3_step_3")}</h3>
+                    <PromptBlock prompt={t("sec_3_prompt_end")} />
+                  </div>
+                </div>
               </section>
 
               {/* Sec 4 */}
@@ -166,25 +233,18 @@ export default function ManualPage() {
               <section id="sec7" className="scroll-mt-32">
                 <h2 className="text-2xl font-bold text-white mb-4">{t("sec_7_title")}</h2>
                 <p className="mb-6 text-gray-400 leading-relaxed">{t("sec_7_desc")}</p>
-                <ol className="list-decimal pl-6 space-y-4">
+                <ol className="list-decimal pl-6 space-y-4 mb-10">
                   <li>{t("sec_7_step_1")}</li>
                   <li>{t("sec_7_step_2")}
                     <p className="text-sm text-yellow-500/80 mt-2 bg-yellow-500/10 p-3 rounded">{t("sec_7_step_2_note")}</p>
                   </li>
-                  <li>{t("sec_7_step_3")}
-                    <ul className="list-disc pl-6 mt-2 space-y-2">
-                      <li>{t("sec_7_step_3_a")}</li>
-                      <li>{t("sec_7_step_3_b")}</li>
-                      <li>{t("sec_7_step_3_c")}</li>
-                    </ul>
-                  </li>
-                  <li>{t("sec_7_step_4")}
-                    <ul className="list-disc pl-6 mt-2 space-y-2">
-                      <li>{t("sec_7_step_4_a")}</li>
-                      <li>{t("sec_7_step_4_b")}</li>
-                    </ul>
-                  </li>
+                  <li>{t("sec_7_step_3")}</li>
                 </ol>
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-3">{t("sec_7_prompt_title")}</h3>
+                  <p className="text-gray-400 mb-4">{t("sec_7_prompt_desc")}</p>
+                  <PromptBlock prompt={t("sec_7_prompt_code")} />
+                </div>
               </section>
 
               {/* Sec 8 */}
