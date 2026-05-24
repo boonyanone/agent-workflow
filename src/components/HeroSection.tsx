@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Terminal, ArrowRight, ShieldCheck, Zap, Database } from "lucide-react";
 import { useTranslations } from "next-intl";
+import AnimatedTerminal from "./AnimatedTerminal";
 
 export default function HeroSection() {
   const t = useTranslations("HomePage");
@@ -65,6 +66,8 @@ export default function HeroSection() {
               <Database size={18} /> Persistent State Machine
             </div>
           </motion.div>
+
+          <AnimatedTerminal />
 
         </div>
       </div>
