@@ -2,15 +2,28 @@
   "HomePage": {
     "title": "Agent Workflow Hub",
     "hero_title": "Stop Context Bloat. Start Coding.",
-    "hero_subtitle": "ปลดล็อกขีดสุดของ AI Coding Protocol ลดการสูญเสีย Token ใน IDE ด้วยพลังจาก Google NotebookLM (RAG) ให้ AI โฟกัสเฉพาะโค้ดตรงหน้าของคุณ",
-    "feature_1_title": "🧠 Zero-Context Amnesia",
-    "feature_1_desc": "หมดยุคที่ต้องแปะ Document ยาวๆ ลงแชท IDE โปรโตคอลของเราทำงานร่วมกับ NotebookLM เพื่อดึงความรู้โปรเจกต์แบบเรียลไทม์",
-    "feature_2_title": "🔐 Enterprise-Grade Security",
-    "feature_2_desc": "รัน AI ในเครื่องได้อย่างปลอดภัย ด้วยระบบ Symlink Hijacking Protection และ Git Hook ตรวจจับไฟล์ .env อัตโนมัติ",
-    "feature_3_title": "📂 Multi-Project Isolated Auth",
-    "feature_3_desc": "สลับทำงานหลายโปรเจกต์ได้สบายๆ ด้วยระบบ Auth แยกโฟลเดอร์ คุณสามารถใช้ Google Account ที่ต่างกันในแต่ละโปรเจกต์ได้โดยไม่ตีกัน",
-    "cta_install": "ติดตั้ง AI Protocol เลย",
-    "cta_manual": "ดูวิธีการใช้งาน",
+    "hero_subtitle": "โปรโตคอลการเขียนโค้ดด้วย AI ทำงานร่วมกับ Google NotebookLM (RAG) ช่วยลดการใช้ Token ใน IDE และให้ AI มุ่งเน้นไปที่โค้ด",
+    
+    "feature_1_title": "Robust Authentication",
+    "feature_1_desc": "ระบบยืนยันตัวตนผ่าน Browser Auth สามารถทำงานข้ามระบบป้องกัน Bot ได้อย่างปลอดภัย",
+    
+    "feature_2_title": "Deep Research Agent",
+    "feature_2_desc": "บอทค้นหาข้อมูลอัตโนมัติบนเว็บและนำเข้าข้อมูลเข้าสู่ NotebookLM ให้ทันที",
+    
+    "feature_3_title": "Notebook Management",
+    "feature_3_desc": "คำสั่งจัดการสมุดโน้ตเต็มรูปแบบ รวมถึงการตั้งค่าเป้าหมาย (Goals) และ Prompts สำหรับแต่ละโน้ต",
+    
+    "feature_4_title": "Advanced Source Control",
+    "feature_4_desc": "รองรับการเพิ่ม Text, URLs, PDFs และไฟล์จาก Google Drive พร้อมระบบ Sync ข้อมูลล่าสุด",
+    
+    "feature_5_title": "Studio & Artifacts",
+    "feature_5_desc": "สั่ง AI สร้าง Audio Overviews (พอดแคสต์), Mind Maps, Quizzes และ Study Guides ได้ทันที",
+    
+    "feature_6_title": "Atomic Security & Git Guard",
+    "feature_6_desc": "ระบบป้องกันการทำงานผิดพลาดของบอท ป้องกัน Symlink Hijacking และดักจับไฟล์ .env ไม่ให้หลุดเข้า Git",
+    
+    "cta_install": "ติดตั้ง AI Protocol",
+    "cta_manual": "อ่านคู่มือการใช้งาน",
     "manual_title": "คู่มือการใช้งาน",
     "nav_features": "ฟีเจอร์",
     "nav_manual": "คู่มือ",
@@ -18,15 +31,57 @@
   },
   "ManualPage": {
     "title": "คู่มือการใช้งานแบบละเอียด",
-    "subtitle": "ทุกสิ่งที่คุณต้องรู้เกี่ยวกับการติดตั้งและใช้งาน AI Coding Protocol",
-    "menu_install": "1. การติดตั้ง (Installation)",
-    "menu_auth": "2. การล็อกอิน (Authentication)",
-    "menu_usage": "3. วิธีใช้งาน (Usage)",
-    "install_title": "1. การติดตั้งระบบ",
-    "install_desc": "รันคำสั่งนี้เพื่อติดตั้งโปรโตคอลและ MCP Server เข้าสู่โปรเจกต์ของคุณ",
-    "auth_title": "2. การยืนยันตัวตน (ล็อกอิน)",
-    "auth_desc": "ระบบจะดูดคุกกี้ให้อัตโนมัติในเสี้ยววินาทีเพื่อใช้เชื่อมต่อกับ NotebookLM",
-    "usage_title": "3. วิธีสั่งงาน AI ในแชท",
-    "usage_desc": "พิมพ์สั่งงาน AI โดยระบุชื่อสมุดโน้ต เช่น: \"ช่วยดึงข้อมูลจากสมุดโน้ตชื่อ 'AI Coding Protocol' มาให้หน่อย\""
+    "subtitle": "ข้อมูลสถาปัตยกรรม วิธีการติดตั้ง และการเรียกใช้งานเครื่องมือทั้งหมดในระบบ",
+    
+    "menu_intro": "1. ภาพรวมระบบ",
+    "menu_install": "2. การติดตั้ง",
+    "menu_auth": "3. การยืนยันตัวตน",
+    "menu_usage": "4. ตั้งค่า Claude Desktop",
+    "menu_tools": "5. เครื่องมือที่มีให้",
+    "menu_notes": "6. ข้อควรระวัง",
+
+    "intro_title": "1. ภาพรวมสถาปัตยกรรม (Architecture)",
+    "intro_desc": "โปรเจกต์นี้ทำงานโดยใช้ Reverse-engineered RPC Client เชื่อมต่อตรงกับ NotebookLM และถูกห่อหุ้มด้วย MCP Server เพื่อให้ AI Agent สามารถเรียกใช้งานได้ มีระบบ Orchestrator ตรงกลางเพื่อจัดการงานที่ต้องใช้เวลานาน (เช่น Deep Research หรือ Audio Generation) ช่วยให้บอทสามารถรอดึงข้อมูลได้โดยไม่เกิด Timeout",
+
+    "install_title": "2. การติดตั้งระบบ (Installation)",
+    "install_desc": "คุณต้องโคลนโปรเจกต์และติดตั้ง Dependencies เพื่อรันเซิร์ฟเวอร์",
+    "install_cmd_1": "npm install",
+    "install_cmd_2": "npm run build",
+
+    "auth_title": "3. การยืนยันตัวตน (Authentication)",
+    "auth_desc": "ระบบต้องการ Cookie เพื่อเข้าถึง NotebookLM ซึ่งสามารถทำได้ 2 วิธี:",
+    "auth_sub_1": "วิธีที่ 1: Browser Auth (แนะนำ)",
+    "auth_sub_1_desc": "รันสคริปต์อัตโนมัติ ระบบจะเปิดเบราว์เซอร์ Chrome ขึ้นมาให้คุณล็อกอิน Google ด้วยตัวเอง เมื่อล็อกอินเสร็จ ระบบจะดูด Cookie ไปเก็บไว้ให้โดยอัตโนมัติ",
+    "auth_cmd_1": "node build/browser-auth.js",
+    "auth_sub_2": "วิธีที่ 2: Manual Token (สำหรับ Headless Server)",
+    "auth_sub_2_desc": "ถ้าคุณรันบนเซิร์ฟเวอร์ที่ไม่มีหน้าจอ ให้เปิด NotebookLM บนเบราว์เซอร์ของคุณเอง เปิด DevTools (Network tab) แล้วคัดลอกค่า Cookie มาใช้กับคำสั่ง authenticate ในแชท",
+
+    "usage_title": "4. การตั้งค่า Claude Desktop (Usage)",
+    "usage_desc": "คุณต้องเพิ่มการตั้งค่านี้ในไฟล์ claude_desktop_config.json เพื่อให้ Claude สามารถเรียกใช้ MCP Server ตัวนี้ได้",
+
+    "tools_title": "5. เครื่องมือที่มีให้เรียกใช้ (Available Tools)",
+    "tools_desc": "เมื่อติดตั้งสำเร็จ AI Agent ของคุณจะมีคำสั่งเหล่านี้เพิ่มขึ้นมา:",
+    
+    "tool_1_name": "manage_notebook",
+    "tool_1_desc": "จัดการวงจรชีวิตของสมุดโน้ต (สร้าง, ลบ, แก้ไขชื่อ) และคำสั่ง configure_chat สำหรับตั้งค่าเป้าหมายของบอท",
+    
+    "tool_2_name": "manage_source",
+    "tool_2_desc": "จัดการแหล่งข้อมูล เพิ่มไฟล์/URL และคำสั่ง sync สำหรับดึงข้อมูลล่าสุดจาก Google Drive",
+    
+    "tool_3_name": "manage_studio",
+    "tool_3_desc": "จัดการไฟล์สื่อที่ถูกสร้างขึ้น (List / Delete) เพื่อเคลียร์พื้นที่โปรเจกต์",
+    
+    "tool_4_name": "query_notebook",
+    "tool_4_desc": "สั่งให้ AI อ่านและวิเคราะห์ข้อมูลทั้งหมดที่อยู่ในสมุดโน้ต เพื่อตอบคำถามเชิงลึก",
+    
+    "tool_5_name": "perform_deep_research",
+    "tool_5_desc": "สั่งให้บอทค้นหาข้อมูลบนอินเทอร์เน็ตแบบเจาะลึกหลายขั้นตอน และนำเข้าเนื้อหาที่ได้กลับเข้าสมุดโน้ต",
+    
+    "tool_6_name": "generate_artifact",
+    "tool_6_desc": "แปลงโน้ตเป็นสื่อรูปแบบอื่น เช่น Audio (Podcast), Quiz, Slides หรือ Mind Map",
+
+    "notes_title": "6. ข้อควรระวัง (Notes)",
+    "notes_desc_1": "คำสั่ง Deep Research อาจใช้เวลา 3-5 นาที เซิร์ฟเวอร์จะคอยเช็กสถานะให้ โปรดรอสักครู่",
+    "notes_desc_2": "การสร้าง Audio Generation ค่อนข้างกินทรัพยากร ตรวจสอบให้แน่ใจว่าในสมุดโน้ตมี Source ข้อมูลเพียงพอก่อนสั่งสร้าง"
   }
 }

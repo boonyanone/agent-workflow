@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { BrainCircuit, ShieldCheck, FolderSync } from "lucide-react";
+import { ShieldCheck, Search, BookOpen, FolderSync, Sparkles, Lock } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 export default function FeaturesSection() {
@@ -9,21 +9,39 @@ export default function FeaturesSection() {
 
   const features = [
     {
-      icon: <BrainCircuit size={32} />,
+      icon: <ShieldCheck size={32} />,
       title: t("feature_1_title"),
       description: t("feature_1_desc"),
       color: "blue"
     },
     {
-      icon: <ShieldCheck size={32} />,
+      icon: <Search size={32} />,
       title: t("feature_2_title"),
       description: t("feature_2_desc"),
       color: "purple"
     },
     {
-      icon: <FolderSync size={32} />,
+      icon: <BookOpen size={32} />,
       title: t("feature_3_title"),
       description: t("feature_3_desc"),
+      color: "indigo"
+    },
+    {
+      icon: <FolderSync size={32} />,
+      title: t("feature_4_title"),
+      description: t("feature_4_desc"),
+      color: "blue"
+    },
+    {
+      icon: <Sparkles size={32} />,
+      title: t("feature_5_title"),
+      description: t("feature_5_desc"),
+      color: "purple"
+    },
+    {
+      icon: <Lock size={32} />,
+      title: t("feature_6_title"),
+      description: t("feature_6_desc"),
       color: "indigo"
     }
   ];
@@ -49,7 +67,7 @@ export default function FeaturesSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <motion.div
               key={index}

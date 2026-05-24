@@ -18,7 +18,7 @@ export default function LanguageSwitcher() {
       onClick={toggleLocale}
       className="px-3 py-1.5 rounded-full bg-blue-100 dark:bg-indigo-900/50 text-blue-700 dark:text-blue-300 text-sm font-semibold hover:scale-105 active:scale-95 transition-all shadow-sm"
     >
-      {locale === 'th' ? '🇺🇸 EN' : '🇹🇭 TH'}
+      {locale === 'th' ? 'EN' : 'TH'}
     </button>
   );
 }

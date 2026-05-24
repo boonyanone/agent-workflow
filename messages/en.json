@@ -2,13 +2,26 @@
   "HomePage": {
     "title": "Agent Workflow Hub",
     "hero_title": "Stop Context Bloat. Start Coding.",
-    "hero_subtitle": "Unlock the full potential of AI Coding Protocol. Reduce Token waste in your IDE powered by Google NotebookLM (RAG), letting your AI focus purely on the code.",
-    "feature_1_title": "🧠 Zero-Context Amnesia",
-    "feature_1_desc": "No more pasting long documents into IDE chats. Our protocol works with NotebookLM to retrieve project knowledge in real-time.",
-    "feature_2_title": "🔐 Enterprise-Grade Security",
-    "feature_2_desc": "Run AI locally with peace of mind. Featuring Symlink Hijacking Protection and automated Git Hooks to detect .env files.",
-    "feature_3_title": "📂 Multi-Project Isolated Auth",
-    "feature_3_desc": "Switch between projects effortlessly. Folder-isolated auth allows you to use different Google Accounts per project without conflict.",
+    "hero_subtitle": "AI Coding Protocol powered by Google NotebookLM (RAG). Reduces IDE token usage by letting the AI focus purely on the code.",
+    
+    "feature_1_title": "Robust Authentication",
+    "feature_1_desc": "Browser Auth mechanism that securely bypasses bot detection systems.",
+    
+    "feature_2_title": "Deep Research Agent",
+    "feature_2_desc": "Autonomous bot that researches the web and automatically imports findings into NotebookLM.",
+    
+    "feature_3_title": "Notebook Management",
+    "feature_3_desc": "Full CRUD commands for notebooks, including setting goals and prompts.",
+    
+    "feature_4_title": "Advanced Source Control",
+    "feature_4_desc": "Supports Text, URLs, PDFs, and Google Drive files with auto-sync capabilities.",
+    
+    "feature_5_title": "Studio & Artifacts",
+    "feature_5_desc": "Instruct the AI to generate Audio Overviews (Podcasts), Mind Maps, Quizzes, and Study Guides.",
+    
+    "feature_6_title": "Atomic Security & Git Guard",
+    "feature_6_desc": "Prevents symlink hijacking and intercepts .env files from leaking into Git commits.",
+    
     "cta_install": "Install AI Protocol",
     "cta_manual": "Read the Manual",
     "manual_title": "User Manual",
@@ -18,15 +31,57 @@
   },
   "ManualPage": {
     "title": "Comprehensive Manual",
-    "subtitle": "Everything you need to know about setting up and using the AI Coding Protocol.",
-    "menu_install": "Installation",
-    "menu_auth": "Authentication",
-    "menu_usage": "Usage & Commands",
-    "install_title": "1. Installation",
-    "install_desc": "Install the protocol and MCP server into your workspace.",
-    "auth_title": "2. Authentication",
-    "auth_desc": "Login with your Google account to enable NotebookLM access.",
-    "usage_title": "3. Usage & Commands",
-    "usage_desc": "Use the following commands in your IDE chat to trigger the workflow."
+    "subtitle": "Detailed documentation on architecture, installation, and tool usage.",
+    
+    "menu_intro": "1. Architecture Overview",
+    "menu_install": "2. Installation",
+    "menu_auth": "3. Authentication",
+    "menu_usage": "4. Claude Desktop Config",
+    "menu_tools": "5. Available Tools",
+    "menu_notes": "6. Important Notes",
+
+    "intro_title": "1. Architecture Overview",
+    "intro_desc": "This project wraps a reverse-engineered RPC Client connecting to NotebookLM inside an MCP Server. It features a middleware Orchestrator to handle asynchronous tasks (like Deep Research and Audio Generation) without causing timeouts.",
+
+    "install_title": "2. Installation",
+    "install_desc": "Clone the repository and install the dependencies to run the server.",
+    "install_cmd_1": "npm install",
+    "install_cmd_2": "npm run build",
+
+    "auth_title": "3. Authentication",
+    "auth_desc": "The system requires cookies to access NotebookLM. Two methods are supported:",
+    "auth_sub_1": "Method 1: Browser Auth (Recommended)",
+    "auth_sub_1_desc": "Runs an automated script to launch Chrome. You manually log into Google, and the system securely extracts the session cookies.",
+    "auth_cmd_1": "node build/browser-auth.js",
+    "auth_sub_2": "Method 2: Manual Token (Headless)",
+    "auth_sub_2_desc": "For environments without a display. Open NotebookLM in your local browser, copy the Cookie header from the Network tab, and use the 'authenticate' tool with method: 'manual'.",
+
+    "usage_title": "4. Claude Desktop Configuration",
+    "usage_desc": "Add the following configuration to your claude_desktop_config.json to enable the MCP Server.",
+
+    "tools_title": "5. Available Tools",
+    "tools_desc": "Once installed, your AI Agent gains access to the following tools:",
+    
+    "tool_1_name": "manage_notebook",
+    "tool_1_desc": "Lifecycle management (create, delete, rename) and configure_chat to set AI objectives.",
+    
+    "tool_2_name": "manage_source",
+    "tool_2_desc": "Manage data sources. Add files/URLs and use the sync command to refresh Google Drive documents.",
+    
+    "tool_3_name": "manage_studio",
+    "tool_3_desc": "List or delete generated media artifacts to clear project space.",
+    
+    "tool_4_name": "query_notebook",
+    "tool_4_desc": "Commands the AI to analyze notebook contents and answer deep contextual questions.",
+    
+    "tool_5_name": "perform_deep_research",
+    "tool_5_desc": "Commands the bot to conduct deep multi-step web research and import the final content into the notebook.",
+    
+    "tool_6_name": "generate_artifact",
+    "tool_6_desc": "Transforms notes into alternative media such as Audio (Podcast), Quizzes, Slides, or Mind Maps.",
+
+    "notes_title": "6. Important Notes",
+    "notes_desc_1": "Deep Research operations may take 3-5 minutes. The server manages polling automatically.",
+    "notes_desc_2": "Audio Generation is highly resource-intensive. Ensure adequate sources are available in the notebook prior to generation."
   }
 }
