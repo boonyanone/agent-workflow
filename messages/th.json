@@ -1,20 +1,28 @@
 {
   "HomePage": {
     "title": "Agent Workflow Hub",
-    "hero_title": "บอกลาบริบทล้นจอ เริ่มโค้ดได้เลย",
-    "hero_subtitle": "โปรโตคอลการเขียนโค้ดด้วย AI ที่ทำงานร่วมกับ Google NotebookLM (RAG) มอบความจำถาวร ความสม่ำเสมอ และสมองกลอัจฉริยะส่วนตัวให้กับ Agent ของคุณ",
+    "hero_title": "สร้างซอฟต์แวร์คู่กับ AI โดยไร้ความวุ่นวาย",
+    "hero_subtitle": "เฟรมเวิร์กจัดการ Workflow ที่เข้มงวดและจำบริบทได้ถาวร สำหรับ Cursor, Windsurf, และ Cline ลืมปัญหาบริบทล้นจอ การมั่วข้อมูล และ UI เละเทะไปได้เลย",
     
-    "feature_1_title": "1. ความจำแม่นยำ (Context Persistence)",
-    "feature_1_desc": "แทนที่จะโยนโค้ดทั้งโปรเจกต์ให้ AI อ่านทุกครั้ง โปรโตคอลนี้ใช้ไฟล์ STATE.md เพื่อจำลอง RAM ขนาดเล็กที่แม่นยำ ทำให้ส่งไม้ต่อระหว่างเซสชันแชทได้อย่างไร้รอยต่อ",
+    "feature_1_title": "จบปัญหาบริบทล้นจอ",
+    "feature_1_desc": "แทนที่จะโยนโค้ดทั้งโปรเจกต์ให้ AI อ่าน โปรโตคอลนี้ใช้ไฟล์ STATE.md จำลอง RAM ขนาดเล็กที่อัปเดตเสมอ",
+    "feature_1_prob": "แชทยาวเกินไป เครื่องอืด และกิน Token มหาศาล",
+    "feature_1_sol": "ไฟล์ STATE.md 20 บรรทัด ช่วยให้ AI โฟกัสและทำงานไวปานสายฟ้า",
     
-    "feature_2_title": "2. ดีไซน์คงที่ (UI Consistency)",
-    "feature_2_desc": "สร้างแหล่งอ้างอิงกลาง (Single Source of Truth) สำหรับ Design System ของคุณ AI จะต้องอ่านคู่มือ UI ก่อนเขียนโค้ด Frontend เสมอ เพื่อให้ได้งานที่เป๊ะตามที่คุณวางไว้",
+    "feature_2_title": "รักษาระบบความจำ",
+    "feature_2_desc": "เมื่อแชทพังหรือยาวเกิน สคริปต์ One-Click Handoff ของเราจะห่อบริบทและส่งต่อไปยังแชทใหม่ได้อย่างสมบูรณ์",
+    "feature_2_prob": "เริ่มแชทใหม่ทีไร AI ลืมกฎและบั๊กที่เคยแก้ไปแล้วทุกที",
+    "feature_2_sol": "การส่งไม้ต่อที่เนียนสนิท ช่วยรักษาสถาปัตยกรรมและบทเรียนที่ผ่านมา",
     
-    "feature_3_title": "3. เชื่อมต่อฐานข้อมูล (Deep Knowledge Base)",
-    "feature_3_desc": "ลดภาระการจำโดยโยนเอกสารคู่มือต่างๆ ให้ Google NotebookLM จัดการผ่าน MCP Server ช่วยประหยัด IDE Token ได้มหาศาล เพราะ AI จะเลือกค้นหาเฉพาะตอนที่จำเป็นเท่านั้น",
+    "feature_3_title": "ดีไซน์คงที่เสมอ",
+    "feature_3_desc": "สร้างแหล่งอ้างอิงกลางให้ Design System ของคุณ AI จะต้องอ่านคู่มือ UI ก่อนเขียนโค้ด Frontend ทุกครั้ง",
+    "feature_3_prob": "AI ชอบประดิษฐ์สีและ Layout ใหม่จนเว็บเละเทะ",
+    "feature_3_sol": "คุมโทนสีและระยะห่างได้เป๊ะปังด้วย Design Tokens",
     
-    "feature_4_title": "4. ปลอดภัยสูงสุด (Absolute Security)",
-    "feature_4_desc": "มี Git Hooks ในตัวเพื่อคอยสแกนไฟล์ .env ป้องกันรหัสหลุดออกสู่ภายนอก และระบบล็อกไฟล์ระดับ Enterprise ป้องกันไม่ให้ AI อัตโนมัติเผลอเขียนไฟล์ทับหรือทำลาย Symlink ของคุณ",
+    "feature_4_title": "ปลอดภัยไร้รอยรั่ว",
+    "feature_4_desc": "มี Git Hooks ช่วยสแกนไฟล์ .env อัตโนมัติเพื่อกันรหัสหลุด และระบบล็อกการเขียนไฟล์ปกป้อง Symlink ของคุณ",
+    "feature_4_prob": "AI ชอบทำรหัสผ่านหลุดหรือเขียนทับไฟล์ระบบพัง",
+    "feature_4_sol": "มีเกราะป้องกันหลายชั้น คอยคุ้มกัน Repository ระหว่างที่ AI ทำงาน",
     
     "cta_install": "ติดตั้ง AI Protocol",
     "cta_manual": "อ่านคู่มือการใช้งาน",
@@ -24,66 +32,52 @@
     "nav_github": "GitHub"
   },
   "ManualPage": {
-    "title": "คู่มือและเอกสารการใช้งาน",
-    "subtitle": "ทุกสิ่งที่คุณต้องรู้เพื่อใช้ Agentic Workflow Protocol อย่างโปร เรียนรู้วิธีตั้งค่า Agent จัดการสถานะ และดึงพลังจาก NotebookLM MCP ออกมาใช้แบบเต็มพิกัด",
+    "title": "เอกสารระบบโปรโตคอล",
+    "subtitle": "แหล่งอ้างอิงเชิงเทคนิคสำหรับการตั้งค่าและใช้งาน MCP Server",
     
-    "menu_intro": "1. ภาพรวมสถาปัตยกรรม",
-    "menu_install": "2. การติดตั้ง",
-    "menu_auth": "3. การยืนยันตัวตน",
-    "menu_usage": "4. ตั้งค่า Claude Desktop",
-    "menu_tools": "5. รายละเอียดเครื่องมือ MCP",
+    "menu_intro": "ภาพรวม",
+    "menu_install": "ชุดคำสั่ง",
+    "menu_tools": "MCP Tools",
 
-    "intro_title": "1. ภาพรวมสถาปัตยกรรม",
-    "intro_desc": "Agent Workflow Protocol ผสมผสานระบบจัดการสถานะในเครื่อง (.ai directory) เข้ากับสมองกลอัจฉริยะภายนอก (NotebookLM MCP Server) โดยมี Orchestrator ทำหน้าที่เป็นสะพานเชื่อมที่ปลอดภัยระหว่าง IDE Agent (Cursor, Windsurf, Cline) ของคุณกับระบบ RAG บนคลาวด์",
+    "intro_title": "1. ภาพรวมระบบ (System Overview)",
+    "intro_desc": "Agent Workflow Protocol เป็นการผสานรวมระหว่างการจัดการสถานะในเครื่อง (.ai directory) กับระบบความรู้ภายนอก (NotebookLM MCP Server) เพื่อรองรับการสเกลงานกับ AI",
 
-    "install_title": "2. การติดตั้ง",
-    "install_desc": "รันสคริปต์เริ่มต้นในโฟลเดอร์โปรเจกต์ของคุณเพื่อติดตั้งสภาพแวดล้อมโปรโตคอล",
-    "install_cmd_1": "./ai-protocol.sh init",
-    "install_cmd_2": "./ai-protocol.sh install-mcp",
-
-    "auth_title": "3. การยืนยันตัวตน",
-    "auth_desc": "ก่อนใช้งาน MCP Tools คุณต้องยืนยันตัวตนบัญชี Google ของคุณ เพื่อให้เซิร์ฟเวอร์สามารถเข้าถึง Notebooks ของคุณได้",
-    "auth_sub_1": "การยืนยันตัวตนผ่านเบราว์เซอร์อัตโนมัติ",
-    "auth_sub_1_desc": "สคริปต์นี้จะเปิดเบราว์เซอร์ Chrome ขึ้นมา เพียงคุณล็อกอินเข้า Google ระบบก็จะดูด Session Cookie มาเก็บไว้ในไฟล์ auth.json อย่างปลอดภัย",
-    "auth_cmd_1": "./ai-protocol.sh auth-mcp",
-
-    "usage_title": "4. การตั้งค่า Claude Desktop",
-    "usage_desc": "หากคุณใช้ Claude Desktop App คุณสามารถตั้งค่าให้รัน MCP Server อัตโนมัติได้ โดยเพิ่มโค้ดนี้ลงในไฟล์ claude_desktop_config.json:",
-
-    "tools_title": "5. รายละเอียดเครื่องมือ MCP (Tools Reference)",
-    "tools_desc": "เมื่อ MCP Server ทำงานแล้ว AI Agent ของคุณจะสามารถเรียกใช้เครื่องมือเหล่านี้เพื่อสื่อสารกับ NotebookLM ได้โดยตรง",
+    "install_title": "2. ชุดคำสั่งลัด (Quick Commands)",
+    "install_desc": "ใช้คำสั่งเหล่านี้ใน Terminal ของคุณเพื่อจัดการการทำงานของโปรโตคอล",
     
-    "tool_what": "มันคืออะไร:",
-    "tool_how": "ทำงานอย่างไร:",
-    "tool_usage": "เหมาะใช้ตอนไหน:",
-    "tool_result": "ผลลัพธ์ที่ได้:",
+    "cmd_col_1": "คำสั่ง (Command)",
+    "cmd_col_2": "การทำงาน (Action)",
+    
+    "cmd_val_1": "./ai-protocol.sh init",
+    "cmd_desc_1": "ติดตั้งโครงสร้างโฟลเดอร์ .ai ลงในโปรเจกต์ของคุณ",
+    "cmd_val_2": "./ai-protocol.sh install-mcp",
+    "cmd_desc_2": "ดาวน์โหลดและคอมไพล์ MCP Server ลงเครื่อง",
+    "cmd_val_3": "./ai-protocol.sh auth-mcp",
+    "cmd_desc_3": "เปิดเบราว์เซอร์เพื่อดูดคุกกี้เข้าสู่ระบบ NotebookLM อย่างปลอดภัย",
+    "cmd_val_4": "node build/index.js",
+    "cmd_desc_4": "สั่งเปิด MCP Server (สำหรับเชื่อมกับ Claude / Cursor)",
+
+    "tools_title": "3. คู่มือ MCP Tools แบบสรุป",
+    "tools_desc": "เครื่องมือที่ AI Agent สามารถเรียกใช้ได้ทันทีเมื่อเชื่อมต่อ MCP Server",
+    
+    "tool_col_1": "ชื่อเครื่องมือ (Tool)",
+    "tool_col_2": "การทำงาน (Action)",
+    "tool_col_3": "ผลลัพธ์ (Result)",
 
     "tool_1_name": "manage_notebook",
-    "tool_1_desc": "เครื่องมือจัดการวงจรชีวิตของ AI Notebooks",
-    "tool_1_what": "เครื่องมือสำหรับ สร้าง เปลี่ยนชื่อ ลบ หรือปรับแต่ง Notebook",
-    "tool_1_how": "ส่งคำสั่ง RPC ไปที่ระบบหลังบ้านของ Google เพื่ออัปเดตสถานะของ Notebook คำสั่ง 'configure_chat' จะช่วยฝัง System Prompt ลงไปในสมุดโน้ต",
-    "tool_1_usage": "ใช้ตอนเริ่มโปรเจกต์หรือโมดูลใหม่ เพื่อสร้างฐานข้อมูลความรู้ที่แยกออกมาเฉพาะเรื่อง",
-    "tool_1_result": "คืนค่า ID ของ Notebook ที่เพิ่งถูกสร้างหรือแก้ไข",
+    "tool_1_desc": "สร้าง เปลี่ยนชื่อ ลบ หรือตั้งค่า AI Notebook",
+    "tool_1_res": "ได้รหัส Notebook ID กลับมา",
 
     "tool_2_name": "manage_source",
-    "tool_2_desc": "อัดฉีดความรู้ลงใน Notebook ของคุณ",
-    "tool_2_what": "เครื่องมือสำหรับอัปโหลดไฟล์ในเครื่อง ลิงก์ URL หรือซิงค์เอกสารจาก Google Drive",
-    "tool_2_how": "อัปโหลดข้อความหรือไฟล์ Markdown เข้าสู่ระบบกลืนข้อมูลของ NotebookLM และสร้าง Source ID ออกมา",
-    "tool_2_usage": "ใช้เมื่อมีลิงก์ API ใหม่ หรือเมื่อมีการตัดสินใจเรื่อง Architecture ก็สั่งให้ AI นำไปเก็บเป็นหลักฐานใน Notebook ได้เลย",
-    "tool_2_result": "ระบบจะวิเคราะห์เนื้อหาและทำให้ AI สามารถค้นหาเอกสารนั้นๆ ได้",
+    "tool_2_desc": "อัปโหลดไฟล์ในเครื่อง URL หรือ Google Drive เข้าไปใน Notebook",
+    "tool_2_res": "ไฟล์ถูกวิเคราะห์และพร้อมให้ค้นหา",
 
     "tool_3_name": "query_notebook",
-    "tool_3_desc": "เครื่องมือหลักสำหรับดึงข้อมูล (RAG Queries)",
-    "tool_3_what": "เครื่องมือที่ให้ AI สั่งค้นหาและถามคำถาม โดยอ้างอิงจากแหล่งข้อมูลใน Notebook เท่านั้น",
-    "tool_3_how": "ใช้ความสามารถในการสร้างเนื้อหาแบบมีฐานข้อมูลอ้างอิง (Grounded Generation) ของ NotebookLM หากระบุ Source ID ด้วย จะเป็นการจำกัดกรอบการค้นหาเฉพาะในเอกสารนั้น",
-    "tool_3_usage": "ใช้เมื่อ AI ต้องเจอกับ API หรือระบบที่ไม่รู้จัก แทนที่จะเดาสุ่มหรือค้นเว็บ ก็ให้มันมาถาม Notebook แทน",
-    "tool_3_result": "ได้รับคำตอบที่ละเอียดและถูกต้องตามความจริง พร้อมทั้งอ้างอิง (Citations) ชี้เป้าว่าเอามาจากเอกสารส่วนไหน",
+    "tool_3_desc": "ยิงคำถาม RAG ถามหาข้อมูลจากไฟล์ที่อัปโหลดไป",
+    "tool_3_res": "ได้คำตอบที่ถูกต้องพร้อมแหล่งอ้างอิง (Citations)",
 
     "tool_4_name": "generate_artifact",
-    "tool_4_desc": "แปลงข้อความให้เป็นสื่อมัลติมีเดีย (Audio/Visual Assets)",
-    "tool_4_what": "สั่งให้ Studio Engine สร้างรายการพอดแคสต์ (Audio Overviews) แบบทดสอบ หรือคู่มือสรุปย่อ",
-    "tool_4_how": "ทริกเกอร์ระบบงานหลังบ้านแบบรอนาน (Async Job) แล้วตัว Orchestrator จะคอยตรวจสอบสถานะจนกว่าจะเสร็จ",
-    "tool_4_usage": "หลังจากจดสรุปการประชุมเสร็จ คุณสามารถสั่งให้ AI สร้างเป็นพอดแคสต์เพื่อเอาไปเปิดฟังตอนขับรถกลับบ้านได้",
-    "tool_4_result": "ได้รับลิงก์ URL หรือไฟล์สื่อมัลติมีเดียที่สั่งทำไว้"
+    "tool_4_desc": "สั่งให้ Studio Engine สร้างรายการพอดแคสต์เสียง หรือแบบทดสอบ",
+    "tool_4_res": "ได้ลิงก์ไฟล์สื่อมัลติมีเดีย"
   }
 }

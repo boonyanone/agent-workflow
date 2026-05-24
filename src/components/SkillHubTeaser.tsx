@@ -1,73 +1,52 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { BookOpen, ShieldCheck, GitBranch, ArrowRight } from "lucide-react";
-
-const skills = [
-  {
-    name: "Deep Research (NotebookLM)",
-    description: "Offload massive documentation to Google NotebookLM. The agent queries the MCP instead of reading 10k lines of code, saving massive tokens.",
-    icon: <BookOpen className="text-blue-500" />,
-    badge: "Built-in"
-  },
-  {
-    name: "Atomic Write Security",
-    description: "Enterprise-grade file writing lock. Prevents symlink hijacking and race conditions when automated agents modify your codebase.",
-    icon: <ShieldCheck className="text-green-500" />,
-    badge: "Built-in"
-  },
-  {
-    name: "Git Pre-commit Guard",
-    description: "A strict git hook that recursively scans for .env files to ensure agents never accidentally commit your API keys.",
-    icon: <GitBranch className="text-purple-500" />,
-    badge: "Built-in"
-  }
-];
+import { Wrench, TerminalSquare, Database } from "lucide-react";
 
 export default function SkillHubTeaser() {
   return (
-    <section id="skills" className="py-24 bg-white/50 dark:bg-indigo-950/50 relative border-y border-slate-200 dark:border-white/5">
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-blue-500/10 blur-[150px] pointer-events-none" />
+    <section className="py-24 relative overflow-hidden bg-space-900 border-t border-glass-border">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-neon-cyan/10 blur-[100px] rounded-full pointer-events-none" />
       
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
-          <div className="max-w-2xl">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">The Agent Skill Hub</h2>
-            <p className="text-slate-600 dark:text-slate-400 font-medium text-lg">
-              The AI Coding Protocol is just the beginning. We are building a centralized registry of "Skills"—standardized tools and prompts that give your agents specific superpowers.
-            </p>
-          </div>
-          <button className="px-6 py-3 rounded-full bg-white dark:bg-slate-800 text-slate-900 dark:text-white font-bold hover:shadow-lg hover:-translate-y-1 transition-all shadow-sm border border-slate-200 dark:border-slate-700 flex items-center gap-2 whitespace-nowrap active:scale-95">
-            Explore Registry <ArrowRight size={16} />
-          </button>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {skills.map((skill, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="glass-panel p-8 rounded-3xl hover:-translate-y-2 hover:shadow-xl transition-all duration-300"
-            >
-              <div className="flex justify-between items-start mb-6">
-                <div className="w-12 h-12 rounded-2xl bg-slate-100 dark:bg-black/30 border border-slate-200 dark:border-white/10 flex items-center justify-center">
-                  {skill.icon}
-                </div>
-                <span className="px-3 py-1 rounded-full text-xs font-bold bg-blue-100 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400 border border-blue-200 dark:border-blue-800">
-                  {skill.badge}
-                </span>
-              </div>
-              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3">{skill.name}</h3>
-              <p className="text-sm text-slate-600 dark:text-slate-400 font-medium leading-relaxed">{skill.description}</p>
-            </motion.div>
-          ))}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-glass-border text-gray-300 text-sm font-medium mb-6">
+          <Wrench size={16} className="text-neon-cyan" />
+          Coming Soon
         </div>
         
-        <div className="mt-12 text-center p-8 border-2 border-dashed border-slate-200 dark:border-slate-800 rounded-3xl bg-white/40 dark:bg-black/20">
-          <p className="text-slate-500 dark:text-slate-400 font-semibold">More community skills coming soon...</p>
+        <motion.h2 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-3xl md:text-5xl font-bold text-white mb-6"
+        >
+          Agent Skill Hub
+        </motion.h2>
+        
+        <motion.p 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.1 }}
+          className="text-gray-400 max-w-2xl mx-auto text-lg mb-12"
+        >
+          An open-source marketplace for AI agent skills. Install pre-configured workflows, MCP servers, and API connectors directly into your `.ai` workspace.
+        </motion.p>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto text-left">
+          {[
+            { name: "Google Cloud Skill", desc: "Deploy functions and query BigQuery.", icon: <Database className="text-blue-400" /> },
+            { name: "GitHub MCP", desc: "Manage PRs and review code automatically.", icon: <TerminalSquare className="text-purple-400" /> },
+            { name: "Firebase Toolkit", desc: "Read and write to Firestore securely.", icon: <Database className="text-orange-400" /> }
+          ].map((skill, i) => (
+            <div key={i} className="glass-panel p-6 rounded-xl border border-glass-border opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all cursor-not-allowed">
+              <div className="flex items-center gap-3 mb-3">
+                {skill.icon}
+                <h4 className="font-bold text-white">{skill.name}</h4>
+              </div>
+              <p className="text-sm text-gray-400">{skill.desc}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

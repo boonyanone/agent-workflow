@@ -1,88 +1,78 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { BrainCircuit, PaintRoller, DatabaseZap, ShieldCheck } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { BrainCircuit, PaintRoller, ShieldCheck, Link } from "lucide-react";
 
 export default function FeaturesSection() {
   const t = useTranslations("HomePage");
 
-  const pillars = [
+  const features = [
     {
-      icon: <BrainCircuit size={40} />,
+      icon: <BrainCircuit size={24} className="text-neon-cyan" />,
       title: t("feature_1_title"),
       description: t("feature_1_desc"),
-      gradient: "from-blue-500 to-cyan-400",
-      bgHover: "hover:shadow-cyan-500/20"
+      problem: t("feature_1_prob"),
+      solution: t("feature_1_sol")
     },
     {
-      icon: <PaintRoller size={40} />,
+      icon: <Link size={24} className="text-neon-purple" />,
       title: t("feature_2_title"),
       description: t("feature_2_desc"),
-      gradient: "from-purple-500 to-pink-400",
-      bgHover: "hover:shadow-pink-500/20"
+      problem: t("feature_2_prob"),
+      solution: t("feature_2_sol")
     },
     {
-      icon: <DatabaseZap size={40} />,
+      icon: <PaintRoller size={24} className="text-neon-cyan" />,
       title: t("feature_3_title"),
       description: t("feature_3_desc"),
-      gradient: "from-indigo-500 to-blue-500",
-      bgHover: "hover:shadow-blue-500/20"
+      problem: t("feature_3_prob"),
+      solution: t("feature_3_sol")
     },
     {
-      icon: <ShieldCheck size={40} />,
+      icon: <ShieldCheck size={24} className="text-neon-purple" />,
       title: t("feature_4_title"),
       description: t("feature_4_desc"),
-      gradient: "from-emerald-500 to-teal-400",
-      bgHover: "hover:shadow-teal-500/20"
+      problem: t("feature_4_prob"),
+      solution: t("feature_4_sol")
     }
   ];
 
   return (
-    <section id="features" className="py-24 relative z-10">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="features" className="py-24 relative bg-space-900 border-t border-glass-border">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-3xl md:text-5xl font-extrabold text-slate-900 dark:text-white mb-6"
-          >
-            4 Core Pillars of the Protocol
-          </motion.h2>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto font-medium text-lg"
-          >
-            A foundational architecture designed to give your AI agents perfect memory, strict consistency, and unlimited knowledge.
-          </motion.p>
+          <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">The Problems We Solve</h2>
+          <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+            Coding with AI is amazing until the context window fills up. We built the protocol to handle the messy parts so you can focus on shipping.
+          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {pillars.map((pillar, index) => (
-            <motion.div
+          {features.map((feature, index) => (
+            <motion.div 
               key={index}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`relative group glass-panel p-8 hover:-translate-y-2 transition-all duration-300 hover:shadow-2xl ${pillar.bgHover} overflow-hidden`}
+              transition={{ delay: index * 0.1 }}
+              className="glass-panel p-8 rounded-2xl flex flex-col h-full hover:border-neon-cyan/30 transition-all group"
             >
-              <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${pillar.gradient} rounded-full blur-[80px] opacity-20 group-hover:opacity-40 transition-opacity duration-500 pointer-events-none`}></div>
+              <div className="w-12 h-12 rounded-xl bg-white/5 border border-glass-border flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                {feature.icon}
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-3">{feature.title}</h3>
+              <p className="text-gray-400 mb-8 flex-grow leading-relaxed">{feature.description}</p>
               
-              <div className="relative z-10 flex flex-col h-full">
-                <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 bg-gradient-to-br ${pillar.gradient} text-white shadow-lg`}>
-                  {pillar.icon}
+              <div className="bg-black/40 rounded-lg p-5 text-sm border border-glass-border">
+                <div className="flex items-start gap-3 mb-3">
+                  <span className="text-red-400 font-bold mt-0.5">❌</span>
+                  <span className="text-gray-400">{feature.problem}</span>
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">
-                  {pillar.title}
-                </h3>
-                <p className="text-slate-600 dark:text-slate-300 font-medium leading-relaxed flex-grow">
-                  {pillar.description}
-                </p>
+                <div className="flex items-start gap-3">
+                  <span className="text-neon-cyan font-bold mt-0.5">✅</span>
+                  <span className="text-white font-medium">{feature.solution}</span>
+                </div>
               </div>
             </motion.div>
           ))}
