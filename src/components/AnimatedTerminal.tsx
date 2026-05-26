@@ -4,13 +4,13 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const lines = [
-  { text: "> ./ai-protocol initialize", delay: 1000 },
-  { text: "[System] Booting up state machine...", delay: 800 },
-  { text: "[System] Locating .ai/STATE.md... Found.", delay: 600 },
-  { text: "[System] Memory context restored. (0.012s)", delay: 800 },
-  { text: "> Analyzing frontend UI consistency...", delay: 1200 },
-  { text: "[Design System] Intercepting CSS modifications...", delay: 800 },
-  { text: "[Security] Enforcing strict write-locks...", delay: 600 },
+  { text: "> npx ai-coding-protocol init", delay: 1000 },
+  { text: "[System] Initializing AI Protocol in the current directory...", delay: 800 },
+  { text: "[Copying] Templates, prompts, and default documentation...", delay: 600 },
+  { text: "[Success] Created multi-IDE config files.", delay: 800 },
+  { text: "[Success] Installed ai-protocol.sh CLI tool.", delay: 1200 },
+  { text: "[Success] Instantiated .ai/STATE.md from template.", delay: 800 },
+  { text: "[System] 🎉 AI Protocol initialization complete!", delay: 600 },
   { text: "> Agent is ready. Waiting for input...", delay: 1000 }
 ];
 
@@ -71,10 +71,10 @@ export default function AnimatedTerminal() {
                   <span className="text-white font-bold">{line.text}</span>
                 ) : line.text.includes("[System]") ? (
                   <span className="text-gray-400"><span className="text-blue-400">[System]</span> {line.text.replace("[System] ", "")}</span>
-                ) : line.text.includes("[Design System]") ? (
-                  <span className="text-gray-400"><span className="text-purple-400">[Design System]</span> {line.text.replace("[Design System] ", "")}</span>
-                ) : line.text.includes("[Security]") ? (
-                  <span className="text-gray-400"><span className="text-red-400">[Security]</span> {line.text.replace("[Security] ", "")}</span>
+                ) : line.text.includes("[Success]") ? (
+                  <span className="text-gray-400"><span className="text-green-400">[Success]</span> {line.text.replace("[Success] ", "")}</span>
+                ) : line.text.includes("[Copying]") ? (
+                  <span className="text-gray-400"><span className="text-purple-400">[Copying]</span> {line.text.replace("[Copying] ", "")}</span>
                 ) : (
                   <span className="text-gray-400">{line.text}</span>
                 )}
