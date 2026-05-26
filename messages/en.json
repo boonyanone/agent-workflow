@@ -52,7 +52,12 @@
     "problem_2_title": "Context Loss (Amnesia)",
     "problem_2_desc": "When the chat gets too slow, you have to start a new one. But then the AI forgets your project structure, database schema, and the bugs you just fixed 5 minutes ago.",
     "problem_3_title": "Inconsistency (Design Drift)",
-    "problem_3_desc": "If you let the AI design web pages freely, it will invent random CSS classes and use incorrect brand colors, resulting in a messy and inconsistent UI."
+    "problem_3_desc": "If left unchecked, AI will hallucinate new CSS classes and use off-brand colors, resulting in a fragmented UI.",
+    
+    "showcase_badge": "Premium UI Templates",
+    "showcase_title_1": "Force AI to write ",
+    "showcase_title_2": "Beautiful Code",
+    "showcase_desc": "Stop letting AI hallucinate CSS classes. Install our God Mode UI templates and force your AI agents to build pixel-perfect clones of top tier frameworks."
   },
   "ManualPage": {
     "title": "Enterprise Manual",
