@@ -16,7 +16,7 @@ export default function SkillHubTeaser() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-5xl font-extrabold text-white tracking-tight mb-6"
+          className="text-2xl md:text-4xl font-extrabold text-white tracking-tight mb-6"
         >
           {t("portfolio_title")}
         </motion.h2>

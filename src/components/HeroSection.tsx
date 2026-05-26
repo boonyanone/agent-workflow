@@ -20,7 +20,7 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h1 className="text-5xl md:text-7xl font-extrabold text-white tracking-tighter mb-8 leading-tight">
+            <h1 className="text-4xl md:text-5xl font-extrabold text-white tracking-tighter mb-8 leading-tight">
               {t("hero_title")}
             </h1>
           </motion.div>
