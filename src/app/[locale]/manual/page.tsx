@@ -159,6 +159,11 @@ export default function ManualPage() {
                     <p className="text-gray-400 mb-2">{t("sec_2_tpl_3_desc")}</p>
                     <CodeBlock command={t("sec_2_tpl_3_cmd")} />
                   </div>
+                  <div>
+                    <h3 className="text-base font-bold text-white mb-2">{t("sec_2_tpl_4_title")}</h3>
+                    <p className="text-gray-400 mb-2">{t("sec_2_tpl_4_desc")}</p>
+                    <CodeBlock command={t("sec_2_tpl_4_cmd")} />
+                  </div>
                 </div>
 
                 <div className="mt-10">

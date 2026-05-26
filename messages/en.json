@@ -80,19 +80,20 @@
     "sec_1_cmd_2": "./ai-protocol.sh install-hook",
 
     "sec_2_title": "2. Design System Setup",
-    "sec_2_desc": "Controlling the UI is critical for enterprise projects. If uncontrolled, AI will hallucinate colors and classes. We provide 3 distinct templates.",
+    "sec_2_desc": "Controlling the UI is critical for enterprise projects. If uncontrolled, AI will hallucinate colors and classes. We provide 4 distinct templates.",
     
-    "sec_2_tpl_1_title": "Template 1: Shadcn UI (Popular)",
-    "sec_2_tpl_1_desc": "Clean, Vercel-style aesthetics using monochrome Tailwind utility classes.",
-    "sec_2_tpl_1_cmd": "cp .ai/templates/ui/shadcn.md .ai/docs/ui_guidelines.md",
-    
-    "sec_2_tpl_2_title": "Template 2: Glassmorphism (Modern)",
-    "sec_2_tpl_2_desc": "Focuses on backdrop-blur, translucency, and dark theme aesthetics.",
-    "sec_2_tpl_2_cmd": "cp .ai/templates/ui/glass.md .ai/docs/ui_guidelines.md",
-
-    "sec_2_tpl_3_title": "Template 3: Enterprise Minimal",
-    "sec_2_tpl_3_desc": "High data-density layouts perfect for internal dashboards and SaaS backends.",
-    "sec_2_tpl_3_cmd": "cp .ai/templates/ui/minimal.md .ai/docs/ui_guidelines.md",
+    "sec_2_tpl_1_title": "Template 1: Minimal (Vercel Style)",
+    "sec_2_tpl_1_desc": "Clean, Vercel/Linear style aesthetics using monochrome Tailwind utility classes. Inspiration: vercel.com, linear.app",
+    "sec_2_tpl_1_cmd": "cp .ai/templates/ui/minimal.md .ai/docs/ui_guidelines.md",
+    "sec_2_tpl_2_title": "Template 2: Futuristic (Glassmorphism)",
+    "sec_2_tpl_2_desc": "Focuses on backdrop-blur, translucency, and dark theme aesthetics. Inspiration: apple.com, framer.com",
+    "sec_2_tpl_2_cmd": "cp .ai/templates/ui/futuristic.md .ai/docs/ui_guidelines.md",
+    "sec_2_tpl_3_title": "Template 3: Vibrant (Modern Fintech)",
+    "sec_2_tpl_3_desc": "High contrast, colorful accents, and bold typography. Inspiration: stripe.com",
+    "sec_2_tpl_3_cmd": "cp .ai/templates/ui/vibrant.md .ai/docs/ui_guidelines.md",
+    "sec_2_tpl_4_title": "Template 4: Enterprise (Data Heavy)",
+    "sec_2_tpl_4_desc": "High data-density layouts perfect for internal dashboards and SaaS backends. Inspiration: github.com, aws.amazon.com",
+    "sec_2_tpl_4_cmd": "cp .ai/templates/ui/data_heavy.md .ai/docs/ui_guidelines.md",
 
     "sec_2_prompt_title": "🎯 How to Prompt the AI for UI",
     "sec_2_prompt_desc": "Once your template is set, paste this exact prompt whenever you ask the AI to build a new interface:",
