@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { Palette } from "lucide-react";
 
 export default function DesignShowcase() {
-  const t = useTranslations("Index");
+  const t = useTranslations("HomePage");
 
   const templates = [
     { name: "Shadcn UI (Minimal)", image: "/images/shadcn.png" },
