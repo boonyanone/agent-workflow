@@ -23,12 +23,12 @@ export default function Navbar() {
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-black/80 backdrop-blur-md border-b border-[#333] shadow-lg shadow-black/50' : 'bg-transparent border-transparent'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className="flex items-center gap-2 cursor-pointer">
-            <div className="p-1.5 bg-white/10 rounded-lg border border-white/20">
-              <Terminal size={20} className="text-white" />
+          <Link href="/" className="flex items-center gap-2 cursor-pointer group">
+            <div className="p-1.5 bg-white/10 rounded-lg border border-white/20 group-hover:border-blue-500/50 transition-colors">
+              <Terminal size={20} className="text-white group-hover:text-blue-400 transition-colors" />
             </div>
-            <span className="font-bold text-xl text-white tracking-tight">Agent Protocol</span>
-          </div>
+            <span className="font-bold text-xl text-white tracking-tight group-hover:text-gray-300 transition-colors">Agent Protocol</span>
+          </Link>
           <div className="hidden md:flex space-x-8 items-center">
             <Link href="/#features" className="text-gray-400 hover:text-white transition-colors">{t("nav_features")}</Link>
             <Link href="/manual" className="text-gray-400 hover:text-white transition-colors">{t("nav_manual")}</Link>

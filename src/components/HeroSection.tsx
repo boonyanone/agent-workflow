@@ -71,9 +71,28 @@ export default function HeroSection() {
         </div>
 
         {/* Full-width Centered Terminal Dashboard */}
-        <div className="max-w-5xl mx-auto relative mt-10">
+        <div className="max-w-5xl mx-auto relative mt-10 mb-20">
           <AnimatedTerminal />
         </div>
+
+        {/* Video Overview */}
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="max-w-4xl mx-auto relative mt-16 rounded-2xl overflow-hidden border border-[#333] shadow-2xl bg-black"
+        >
+          <div className="relative pb-[56.25%] h-0">
+            <iframe 
+              className="absolute top-0 left-0 w-full h-full"
+              src="https://www.youtube.com/embed/lv-JEr-ZgfA" 
+              title="Agent Workflow Hub Overview"
+              frameBorder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowFullScreen
+            ></iframe>
+          </div>
+        </motion.div>
 
       </div>
     </section>

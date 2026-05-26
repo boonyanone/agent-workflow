@@ -103,16 +103,18 @@ export default function ManualPage() {
           <div className="flex-1 max-w-3xl">
             <article className="prose prose-invert prose-p:text-gray-300 prose-headings:text-white max-w-none space-y-16">
               
-              {/* Architecture Image at the top of content */}
-              <div className="mb-16 border border-[#333] rounded-xl overflow-hidden bg-[#050505] p-2">
-                <Image 
-                  src="/architecture.jpg" 
-                  alt="Agentic Workflow Architecture" 
-                  width={1200} 
-                  height={675}
-                  className="w-full h-auto rounded-lg object-contain"
-                  priority
-                />
+              {/* Video Overview */}
+              <div className="mb-16 border border-[#333] rounded-xl overflow-hidden bg-[#050505] shadow-2xl">
+                <div className="relative pb-[56.25%] h-0">
+                  <iframe 
+                    className="absolute top-0 left-0 w-full h-full"
+                    src="https://www.youtube.com/embed/lv-JEr-ZgfA" 
+                    title="Agent Workflow Hub Overview"
+                    frameBorder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowFullScreen
+                  ></iframe>
+                </div>
               </div>
 
               {/* Sec 1 */}

@@ -22,7 +22,10 @@
     "feature_4_title": "Enterprise-Grade Security.",
     "feature_4_desc": "Execute autonomous code with absolute confidence. Our framework features recursive Git Hooks and OS-level write locks to prevent catastrophic file corruption and API key leaks.",
     "feature_4_prob": "Raw AI agents accidentally expose secrets or overwrite critical files.",
-    "feature_4_sol": "Multi-layered safety protocols guard your repository 24/7.",
+    "feature_4_sol": "Multi-layered protection secures your code 24/7",
+    
+    "features_section_title": "Engineered for Extreme Performance.",
+    "features_section_subtitle": "Traditional AI chats collapse under their own weight. We built a framework that scales with your ambition.",
     
     "cta_install": "Deploy Protocol",
     "cta_manual": "Read Documentation",
