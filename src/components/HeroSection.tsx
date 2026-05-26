@@ -24,7 +24,7 @@ export default function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tighter mb-6 leading-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-4xl xl:text-5xl font-extrabold text-white tracking-tighter mb-6 leading-tight lg:whitespace-nowrap">
                 {t("hero_title")}
               </h1>
             </motion.div>
@@ -43,22 +43,22 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4"
+              className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3"
             >
-              <a href="https://github.com/boonyanone/ai-coding-protocol" target="_blank" rel="noreferrer" className="w-full sm:w-auto px-6 py-4 rounded-md bg-white text-black font-bold hover:bg-gray-200 transition-colors flex items-center justify-center gap-2">
-                <Terminal size={20} />
+              <a href="https://github.com/boonyanone/ai-coding-protocol" target="_blank" rel="noreferrer" className="w-full sm:w-auto px-4 py-3 rounded-md bg-white text-black font-semibold text-sm hover:bg-gray-200 transition-colors flex items-center justify-center gap-2 whitespace-nowrap">
+                <Terminal size={18} />
                 {t("cta_install")}
               </a>
               <button 
                 onClick={() => setIsVideoOpen(true)}
-                className="w-full sm:w-auto px-6 py-4 rounded-md bg-blue-600 text-white font-bold hover:bg-blue-500 transition-colors flex items-center justify-center gap-2 shadow-lg shadow-blue-500/20"
+                className="w-full sm:w-auto px-4 py-3 rounded-md bg-blue-600 text-white font-semibold text-sm hover:bg-blue-500 transition-colors flex items-center justify-center gap-2 shadow-lg shadow-blue-500/20 whitespace-nowrap"
               >
-                <PlayCircle size={20} />
+                <PlayCircle size={18} />
                 Watch Demo
               </button>
-              <Link href="/manual" className="w-full sm:w-auto px-6 py-4 rounded-md bg-transparent border border-[#333] text-white font-medium hover:bg-white/5 transition-colors flex items-center justify-center gap-2">
+              <Link href="/manual" className="w-full sm:w-auto px-4 py-3 rounded-md bg-transparent border border-[#333] text-white font-medium text-sm hover:bg-white/5 transition-colors flex items-center justify-center gap-2 whitespace-nowrap">
                 {t("cta_manual")}
-                <ArrowRight size={20} />
+                <ArrowRight size={18} />
               </Link>
             </motion.div>
             
@@ -66,16 +66,16 @@ export default function HeroSection() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="mt-10 flex flex-wrap justify-center lg:justify-start gap-x-8 gap-y-4 text-xs sm:text-sm font-semibold text-gray-500 uppercase tracking-widest"
+              className="mt-8 flex flex-wrap lg:flex-nowrap justify-center lg:justify-start gap-x-3 gap-y-3 text-[10px] xl:text-xs font-semibold text-gray-500 uppercase tracking-widest whitespace-nowrap"
             >
-              <div className="flex items-center gap-2">
-                <ShieldCheck size={16} /> OS-Level Write Locks
+              <div className="flex items-center gap-1.5">
+                <ShieldCheck size={14} /> OS-Level Write Locks
               </div>
-              <div className="flex items-center gap-2">
-                <Zap size={16} /> Zero Context Bloat
+              <div className="flex items-center gap-1.5">
+                <Zap size={14} /> Zero Context Bloat
               </div>
-              <div className="flex items-center gap-2">
-                <Database size={16} /> Persistent State Machine
+              <div className="flex items-center gap-1.5">
+                <Database size={14} /> Persistent State Machine
               </div>
             </motion.div>
           </div>
