@@ -76,7 +76,7 @@ export default function ManualPage() {
         
         {/* Header */}
         <div className="mb-12 border-b border-[#333] pb-8">
-          <h1 className="text-4xl font-bold text-white mb-4 tracking-tight">{t("title")}</h1>
+          <h1 className="text-3xl font-bold text-white mb-4 tracking-tight">{t("title")}</h1>
           <p className="text-lg text-gray-400">{t("subtitle")}</p>
         </div>
 
@@ -117,7 +117,7 @@ export default function ManualPage() {
 
               {/* Sec 1 */}
               <section id="sec1" className="scroll-mt-32">
-                <h2 className="text-2xl font-bold text-white mb-4">{t("sec_1_title")}</h2>
+                <h2 className="text-xl font-bold text-white mb-4">{t("sec_1_title")}</h2>
                 <p className="mb-4 text-gray-400 leading-relaxed">{t("sec_1_desc")}</p>
                 <ul className="list-decimal pl-6 space-y-3 mb-6">
                   <li>{t("sec_1_step_1")}</li>
@@ -138,29 +138,29 @@ export default function ManualPage() {
 
               {/* Sec 2 */}
               <section id="sec2" className="scroll-mt-32">
-                <h2 className="text-2xl font-bold text-white mb-6">{t("sec_2_title")}</h2>
+                <h2 className="text-xl font-bold text-white mb-6">{t("sec_2_title")}</h2>
                 <p className="mb-8 text-gray-400 leading-relaxed">{t("sec_2_desc")}</p>
                 
                 <div className="space-y-8 mb-8 border-l-2 border-[#333] pl-6">
                   <div>
-                    <h3 className="text-lg font-bold text-white mb-2">{t("sec_2_tpl_1_title")}</h3>
+                    <h3 className="text-base font-bold text-white mb-2">{t("sec_2_tpl_1_title")}</h3>
                     <p className="text-gray-400 mb-2">{t("sec_2_tpl_1_desc")}</p>
                     <CodeBlock command={t("sec_2_tpl_1_cmd")} />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-white mb-2">{t("sec_2_tpl_2_title")}</h3>
+                    <h3 className="text-base font-bold text-white mb-2">{t("sec_2_tpl_2_title")}</h3>
                     <p className="text-gray-400 mb-2">{t("sec_2_tpl_2_desc")}</p>
                     <CodeBlock command={t("sec_2_tpl_2_cmd")} />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-white mb-2">{t("sec_2_tpl_3_title")}</h3>
+                    <h3 className="text-base font-bold text-white mb-2">{t("sec_2_tpl_3_title")}</h3>
                     <p className="text-gray-400 mb-2">{t("sec_2_tpl_3_desc")}</p>
                     <CodeBlock command={t("sec_2_tpl_3_cmd")} />
                   </div>
                 </div>
 
                 <div className="mt-10">
-                  <h3 className="text-xl font-bold text-white mb-3">{t("sec_2_prompt_title")}</h3>
+                  <h3 className="text-lg font-bold text-white mb-3">{t("sec_2_prompt_title")}</h3>
                   <p className="text-gray-400 mb-4">{t("sec_2_prompt_desc")}</p>
                   <PromptBlock prompt={t("sec_2_prompt_code")} />
                 </div>
@@ -168,18 +168,18 @@ export default function ManualPage() {
 
               {/* Sec 3 */}
               <section id="sec3" className="scroll-mt-32">
-                <h2 className="text-2xl font-bold text-white mb-4">{t("sec_3_title")}</h2>
+                <h2 className="text-xl font-bold text-white mb-4">{t("sec_3_title")}</h2>
                 <p className="mb-6 text-gray-400 leading-relaxed">{t("sec_3_desc")}</p>
                 <div className="space-y-8">
                   <div>
-                    <h3 className="text-lg font-medium text-white mb-2">{t("sec_3_step_1")}</h3>
+                    <h3 className="text-base font-medium text-white mb-2">{t("sec_3_step_1")}</h3>
                     <PromptBlock prompt={t("sec_3_prompt_start")} />
                   </div>
                   <div>
-                    <h3 className="text-lg font-medium text-white mb-2">{t("sec_3_step_2")}</h3>
+                    <h3 className="text-base font-medium text-white mb-2">{t("sec_3_step_2")}</h3>
                   </div>
                   <div>
-                    <h3 className="text-lg font-medium text-white mb-2">{t("sec_3_step_3")}</h3>
+                    <h3 className="text-base font-medium text-white mb-2">{t("sec_3_step_3")}</h3>
                     <PromptBlock prompt={t("sec_3_prompt_end")} />
                   </div>
                 </div>
@@ -187,7 +187,7 @@ export default function ManualPage() {
 
               {/* Sec 4 */}
               <section id="sec4" className="scroll-mt-32">
-                <h2 className="text-2xl font-bold text-white mb-4">{t("sec_4_title")}</h2>
+                <h2 className="text-xl font-bold text-white mb-4">{t("sec_4_title")}</h2>
                 <p className="mb-6 text-gray-400 leading-relaxed">{t("sec_4_desc")}</p>
                 <div className="space-y-6">
                   <div>
@@ -209,7 +209,7 @@ export default function ManualPage() {
 
               {/* Sec 5 */}
               <section id="sec5" className="scroll-mt-32">
-                <h2 className="text-2xl font-bold text-white mb-4">{t("sec_5_title")}</h2>
+                <h2 className="text-xl font-bold text-white mb-4">{t("sec_5_title")}</h2>
                 <p className="mb-4 text-gray-400 leading-relaxed">{t("sec_5_desc")}</p>
                 <ol className="list-decimal pl-6 space-y-3">
                   <li>{t("sec_5_step_1")}
@@ -223,7 +223,7 @@ export default function ManualPage() {
 
               {/* Sec 6 */}
               <section id="sec6" className="scroll-mt-32">
-                <h2 className="text-2xl font-bold text-white mb-4">{t("sec_6_title")}</h2>
+                <h2 className="text-xl font-bold text-white mb-4">{t("sec_6_title")}</h2>
                 <p className="mb-4 text-gray-400 leading-relaxed">{t("sec_6_desc")}</p>
                 <CodeBlock command={t("sec_6_cmd_1")} />
                 <p className="mt-4 text-sm text-gray-400">{t("sec_6_note")}</p>
@@ -231,7 +231,7 @@ export default function ManualPage() {
 
               {/* Sec 7 */}
               <section id="sec7" className="scroll-mt-32">
-                <h2 className="text-2xl font-bold text-white mb-4">{t("sec_7_title")}</h2>
+                <h2 className="text-xl font-bold text-white mb-4">{t("sec_7_title")}</h2>
                 <p className="mb-6 text-gray-400 leading-relaxed">{t("sec_7_desc")}</p>
                 <ol className="list-decimal pl-6 space-y-4 mb-10">
                   <li>{t("sec_7_step_1")}</li>
@@ -241,7 +241,7 @@ export default function ManualPage() {
                   <li>{t("sec_7_step_3")}</li>
                 </ol>
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-3">{t("sec_7_prompt_title")}</h3>
+                  <h3 className="text-lg font-bold text-white mb-3">{t("sec_7_prompt_title")}</h3>
                   <p className="text-gray-400 mb-4">{t("sec_7_prompt_desc")}</p>
                   <PromptBlock prompt={t("sec_7_prompt_code")} />
                 </div>
@@ -249,7 +249,7 @@ export default function ManualPage() {
 
               {/* Sec 8 */}
               <section id="sec8" className="scroll-mt-32">
-                <h2 className="text-2xl font-bold text-white mb-4">{t("sec_8_title")}</h2>
+                <h2 className="text-xl font-bold text-white mb-4">{t("sec_8_title")}</h2>
                 <p className="mb-6 text-gray-400 leading-relaxed">{t("sec_8_desc")}</p>
                 <div className="overflow-x-auto border border-[#333] rounded-lg">
                   <table className="min-w-full divide-y divide-[#333] text-left">
