@@ -71,7 +71,7 @@
     "sec_1_desc": "Getting started is very easy. This step creates the 'Second Brain' for the AI in your project.",
     "sec_1_step_1": "Open Terminal and navigate to your project folder: cd ~/my-app",
     "sec_1_step_2": "Run the initialization command:",
-    "sec_1_cmd_1": "npx ai-coding-protocol init",
+    "sec_1_cmd_1": "npx --yes github:boonyanone/ai-coding-protocol init",
     "sec_1_step_3_title": "Created Structure (The Second Brain):",
     "sec_1_step_3_a": ".ai/STATE.md - Acts as the RAM for active tasks.",
     "sec_1_step_3_b": ".ai/REFLECTIONS.md - Acts as a ledger for solved bugs.",

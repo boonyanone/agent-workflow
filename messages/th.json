@@ -71,7 +71,7 @@
     "sec_1_desc": "การเริ่มต้นใช้งานนั้นง่ายมากครับ ขั้นตอนนี้คือการสร้าง 'สมองความจำ' (Second Brain) ให้กับ AI ในโปรเจกต์ของคุณ",
     "sec_1_step_1": "เปิด Terminal แล้วพิมพ์คำสั่งเข้าไปที่โฟลเดอร์โปรเจกต์: cd ~/my-app",
     "sec_1_step_2": "พิมพ์คำสั่งเริ่มต้นระบบ (Init) ลงไป:",
-    "sec_1_cmd_1": "npx ai-coding-protocol init",
+    "sec_1_cmd_1": "npx --yes github:boonyanone/ai-coding-protocol init",
     "sec_1_step_3_title": "โครงสร้างที่ถูกสร้างขึ้น (The Second Brain):",
     "sec_1_step_3_a": ".ai/STATE.md - ทำหน้าที่เป็น RAM ไว้จดจำงานปัจจุบัน",
     "sec_1_step_3_b": ".ai/REFLECTIONS.md - ทำหน้าที่เป็นสมุดจดบันทึกบั๊กที่เคยแก้",
