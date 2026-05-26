@@ -3,6 +3,7 @@ import HeroSection from "@/components/HeroSection";
 import ContextCollapseSection from "@/components/ContextCollapseSection";
 import FeaturesSection from "@/components/FeaturesSection";
 import SkillHubTeaser from "@/components/SkillHubTeaser";
+import DesignShowcase from "@/components/DesignShowcase";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <ContextCollapseSection />
+      <DesignShowcase />
       <FeaturesSection />
       <SkillHubTeaser />
       <Footer />

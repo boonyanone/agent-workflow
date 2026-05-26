@@ -82,21 +82,21 @@
     "sec_2_title": "2. การตั้งค่า Design System",
     "sec_2_desc": "การคุมดีไซน์คือหัวใจสำคัญของการทำโปรเจกต์ขนาดใหญ่ หากไม่คุม AI จะสร้างสีและคลาสแปลกๆ ขึ้นมามั่วไปหมด โปรโตคอลของเรามี Template ดีไซน์ 4 รูปแบบให้เลือกใช้",
     
-    "sec_2_tpl_1_title": "รูปแบบที่ 1: Minimal (สไตล์ Vercel/Linear)",
-    "sec_2_tpl_1_desc": "เน้นความเรียบหรู คลีน สไตล์ Vercel และ Tailwind ขาวดำ (Inspiration: vercel.com, linear.app)",
-    "sec_2_tpl_1_cmd": "cp .ai/templates/ui/minimal.md .ai/docs/ui_guidelines.md",
+    "sec_2_tpl_1_title": "รูปแบบที่ 1: Shadcn UI (ยอดนิยม & มินิมอล)",
+    "sec_2_tpl_1_desc": "เน้นความเรียบหรู คลีน ใช้ Tailwind ขาวดำเป็นหลัก (Inspiration: ui.shadcn.com)",
+    "sec_2_tpl_1_cmd": "cp .ai/templates/ui/shadcn.md .ai/docs/ui_guidelines.md",
     
-    "sec_2_tpl_2_title": "รูปแบบที่ 2: Futuristic (สไตล์ Glassmorphism)",
-    "sec_2_tpl_2_desc": "เน้นพื้นหลังโปร่งแสง เบลอ (backdrop-blur) พื้นหลังสีเข้ม (Inspiration: apple.com, framer.com)",
-    "sec_2_tpl_2_cmd": "cp .ai/templates/ui/futuristic.md .ai/docs/ui_guidelines.md",
+    "sec_2_tpl_2_title": "รูปแบบที่ 2: Aceternity UI (ล้ำสมัย & แอนิเมชัน)",
+    "sec_2_tpl_2_desc": "เน้นลูกเล่นแอนิเมชัน พื้นหลังโปร่งแสง และคอมโพเนนต์ที่ดูล้ำอนาคต (Inspiration: ui.aceternity.com)",
+    "sec_2_tpl_2_cmd": "cp .ai/templates/ui/aceternity.md .ai/docs/ui_guidelines.md",
 
-    "sec_2_tpl_3_title": "รูปแบบที่ 3: Vibrant (สีสัน Fintech)",
-    "sec_2_tpl_3_desc": "เน้นความมีชีวิตชีวา สีสันสดใส และลูกเล่นที่น่าสนใจ (Inspiration: stripe.com)",
-    "sec_2_tpl_3_cmd": "cp .ai/templates/ui/vibrant.md .ai/docs/ui_guidelines.md",
+    "sec_2_tpl_3_title": "รูปแบบที่ 3: NextUI (สีสันสดใส & ทันสมัย)",
+    "sec_2_tpl_3_desc": "เน้นสีสันที่สวยงาม คอนทราสต์ชัดเจน และดูมีชีวิตชีวา (Inspiration: nextui.org)",
+    "sec_2_tpl_3_cmd": "cp .ai/templates/ui/nextui.md .ai/docs/ui_guidelines.md",
 
-    "sec_2_tpl_4_title": "รูปแบบที่ 4: Enterprise (เน้นข้อมูลหนาแน่น)",
-    "sec_2_tpl_4_desc": "เน้นความสะอาดตา ข้อมูลหนาแน่น เหมาะสำหรับระบบหลังบ้าน Dashboard (Inspiration: github.com, aws.amazon.com)",
-    "sec_2_tpl_4_cmd": "cp .ai/templates/ui/data_heavy.md .ai/docs/ui_guidelines.md",
+    "sec_2_tpl_4_title": "รูปแบบที่ 4: Ant Design (องค์กร & ข้อมูลหนาแน่น)",
+    "sec_2_tpl_4_desc": "เน้นความเป็นระเบียบ ข้อมูลเยอะ เหมาะสำหรับระบบหลังบ้าน Dashboard (Inspiration: ant.design)",
+    "sec_2_tpl_4_cmd": "cp .ai/templates/ui/antdesign.md .ai/docs/ui_guidelines.md",
 
     "sec_2_prompt_title": "🎯 วิธีสั่ง AI ให้ทำตาม Design System",
     "sec_2_prompt_desc": "เมื่อคุณคัดลอกไฟล์เสร็จแล้ว ทุกครั้งที่จะสั่งทำ UI ใหม่ ให้ก๊อปปี้ Prompt ด้านล่างนี้ส่งให้ AI:",

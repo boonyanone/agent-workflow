@@ -146,22 +146,34 @@ export default function ManualPage() {
                 <div className="space-y-8 mb-8 border-l-2 border-[#333] pl-6">
                   <div>
                     <h3 className="text-base font-bold text-white mb-2">{t("sec_2_tpl_1_title")}</h3>
-                    <p className="text-gray-400 mb-2">{t("sec_2_tpl_1_desc")}</p>
+                    <p className="text-gray-400 mb-4">{t("sec_2_tpl_1_desc")}</p>
+                    <div className="mb-4 rounded-xl overflow-hidden border border-[#333]">
+                      <Image src="/images/shadcn.png" alt="Shadcn UI Mockup" width={800} height={450} className="w-full object-cover" />
+                    </div>
                     <CodeBlock command={t("sec_2_tpl_1_cmd")} />
                   </div>
                   <div>
                     <h3 className="text-base font-bold text-white mb-2">{t("sec_2_tpl_2_title")}</h3>
-                    <p className="text-gray-400 mb-2">{t("sec_2_tpl_2_desc")}</p>
+                    <p className="text-gray-400 mb-4">{t("sec_2_tpl_2_desc")}</p>
+                    <div className="mb-4 rounded-xl overflow-hidden border border-[#333]">
+                      <Image src="/images/aceternity.png" alt="Aceternity UI Mockup" width={800} height={450} className="w-full object-cover" />
+                    </div>
                     <CodeBlock command={t("sec_2_tpl_2_cmd")} />
                   </div>
                   <div>
                     <h3 className="text-base font-bold text-white mb-2">{t("sec_2_tpl_3_title")}</h3>
-                    <p className="text-gray-400 mb-2">{t("sec_2_tpl_3_desc")}</p>
+                    <p className="text-gray-400 mb-4">{t("sec_2_tpl_3_desc")}</p>
+                    <div className="mb-4 rounded-xl overflow-hidden border border-[#333]">
+                      <Image src="/images/nextui.png" alt="NextUI Mockup" width={800} height={450} className="w-full object-cover" />
+                    </div>
                     <CodeBlock command={t("sec_2_tpl_3_cmd")} />
                   </div>
                   <div>
                     <h3 className="text-base font-bold text-white mb-2">{t("sec_2_tpl_4_title")}</h3>
-                    <p className="text-gray-400 mb-2">{t("sec_2_tpl_4_desc")}</p>
+                    <p className="text-gray-400 mb-4">{t("sec_2_tpl_4_desc")}</p>
+                    <div className="mb-4 rounded-xl overflow-hidden border border-[#333]">
+                      <Image src="/images/antdesign.png" alt="Ant Design Mockup" width={800} height={450} className="w-full object-cover" />
+                    </div>
                     <CodeBlock command={t("sec_2_tpl_4_cmd")} />
                   </div>
                 </div>
