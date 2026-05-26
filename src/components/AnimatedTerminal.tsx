@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const lines = [
-  { text: "> npx ai-coding-protocol init", delay: 1000 },
+  { text: "> npx --yes github:boonyanone/ai-coding-protocol init", delay: 1000 },
   { text: "[System] Initializing AI Protocol in the current directory...", delay: 800 },
   { text: "[Copying] Templates, prompts, and default documentation...", delay: 600 },
   { text: "[Success] Created multi-IDE config files.", delay: 800 },
