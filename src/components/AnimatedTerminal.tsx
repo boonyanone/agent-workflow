@@ -16,7 +16,7 @@ const lines = [
 
 export default function AnimatedTerminal() {
   const [visibleLines, setVisibleLines] = useState<number>(0);
-  const [isTyping, setIsTyping] = useState<boolean>(true);
+  const isTyping = visibleLines < lines.length;
 
   useEffect(() => {
     if (visibleLines < lines.length) {
@@ -24,8 +24,6 @@ export default function AnimatedTerminal() {
         setVisibleLines(prev => prev + 1);
       }, lines[visibleLines].delay);
       return () => clearTimeout(timer);
-    } else {
-      setIsTyping(false);
     }
   }, [visibleLines]);
 

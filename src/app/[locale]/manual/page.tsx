@@ -7,28 +7,27 @@ import { Copy, Check, MessageSquare, Terminal } from "lucide-react";
 import { useState } from "react";
 import Image from "next/image";
 
-export default function ManualPage() {
-  const t = useTranslations("ManualPage");
-  const [copiedCmd, setCopiedCmd] = useState<string | null>(null);
-
-  const copyCommand = (cmd: string) => {
-    navigator.clipboard.writeText(cmd);
-    setCopiedCmd(cmd);
-    setTimeout(() => setCopiedCmd(null), 2000);
+// Reusable component for BASH commands
+const CodeBlock = ({ command, multiline = false }: { command: string, multiline?: boolean }) => {
+  const [copied, setCopied] = useState(false);
+  
+  const handleCopy = () => {
+    navigator.clipboard.writeText(command);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
   };
 
-  // Reusable component for BASH commands
-  const CodeBlock = ({ command, multiline = false }: { command: string, multiline?: boolean }) => (
+  return (
     <div className="relative w-full bg-[#111] border border-[#333] rounded overflow-hidden my-4">
       <div className="flex items-center justify-between px-4 py-2 bg-[#050505] border-b border-[#333]">
         <div className="flex items-center gap-2 text-xs font-mono text-gray-500">
           <Terminal size={14} /> BASH
         </div>
         <button 
-          onClick={() => copyCommand(command)}
+          onClick={handleCopy}
           className="text-gray-500 hover:text-white transition-colors"
         >
-          {copiedCmd === command ? <Check size={14} className="text-green-500" /> : <Copy size={14} />}
+          {copied ? <Check size={14} className="text-green-500" /> : <Copy size={14} />}
         </button>
       </div>
       <div className="p-4 overflow-x-auto">
@@ -45,28 +44,42 @@ export default function ManualPage() {
       </div>
     </div>
   );
+};
 
-  // Reusable component for AI Prompts
-  const PromptBlock = ({ prompt }: { prompt: string }) => (
+// Reusable component for AI Prompts
+const PromptBlock = ({ prompt }: { prompt: string }) => {
+  const [copied, setCopied] = useState(false);
+  
+  const handleCopy = () => {
+    navigator.clipboard.writeText(prompt);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
+  return (
     <div className="relative w-full bg-blue-950/20 border border-blue-900/50 rounded overflow-hidden my-4">
       <div className="flex items-center justify-between px-4 py-2 bg-blue-950/40 border-b border-blue-900/50">
         <div className="flex items-center gap-2 text-xs font-bold text-blue-400 uppercase tracking-wider">
           <MessageSquare size={14} /> AI Prompt
         </div>
         <button 
-          onClick={() => copyCommand(prompt)}
+          onClick={handleCopy}
           className="text-blue-500 hover:text-blue-300 transition-colors"
         >
-          {copiedCmd === prompt ? <Check size={14} className="text-green-500" /> : <Copy size={14} />}
+          {copied ? <Check size={14} className="text-green-500" /> : <Copy size={14} />}
         </button>
       </div>
       <div className="p-4 overflow-x-auto">
         <p className="text-sm text-blue-100/80 leading-relaxed italic border-l-2 border-blue-500 pl-4 py-1">
-          "{prompt}"
+          &quot;{prompt}&quot;
         </p>
       </div>
     </div>
   );
+};
+
+export default function ManualPage() {
+  const t = useTranslations("ManualPage");
 
   return (
     <main className="min-h-screen bg-[#000000] pt-24 text-gray-300">
