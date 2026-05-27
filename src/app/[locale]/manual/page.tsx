@@ -172,7 +172,7 @@ export default function ManualPage() {
                     <h3 className="text-base font-bold text-white mb-2">{t("sec_2_tpl_4_title")}</h3>
                     <p className="text-gray-400 mb-4">{t("sec_2_tpl_4_desc")}</p>
                     <div className="mb-4 rounded-xl overflow-hidden border border-[#333]">
-                      <Image src="/images/antdesign.png" alt="Ant Design Mockup" width={800} height={450} className="w-full object-cover" />
+                      <Image src="/images/blocks.png" alt="Blocks.so Mockup" width={800} height={450} className="w-full object-cover" />
                     </div>
                     <CodeBlock command={t("sec_2_tpl_4_cmd")} />
                   </div>

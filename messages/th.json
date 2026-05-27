@@ -102,9 +102,9 @@
     "sec_2_tpl_3_desc": "เน้นสีสันที่สวยงาม คอนทราสต์ชัดเจน และดูมีชีวิตชีวา (Inspiration: nextui.org)",
     "sec_2_tpl_3_cmd": "cp .ai/templates/ui/nextui.md .ai/docs/ui_guidelines.md",
 
-    "sec_2_tpl_4_title": "รูปแบบที่ 4: Ant Design (องค์กร & ข้อมูลหนาแน่น)",
-    "sec_2_tpl_4_desc": "เน้นความเป็นระเบียบ ข้อมูลเยอะ เหมาะสำหรับระบบหลังบ้าน Dashboard (Inspiration: ant.design)",
-    "sec_2_tpl_4_cmd": "cp .ai/templates/ui/antdesign.md .ai/docs/ui_guidelines.md",
+    "sec_2_tpl_4_title": "4. Blocks.so + shadcn/ui (สำหรับแดชบอร์ดระดับพรีเมียม)",
+    "sec_2_tpl_4_desc": "มินิมอล สะอาดตา สว่าง และดูเป็น Enterprise เน้นโครงสร้างที่มีประสิทธิภาพ",
+    "sec_2_tpl_4_cmd": "cp .ai/templates/ui/blocks.md .ai/docs/ui_guidelines.md",
 
     "sec_2_prompt_title": "🎯 วิธีสั่ง AI ให้ทำตาม Design System",
     "sec_2_prompt_desc": "เมื่อคุณคัดลอกไฟล์เสร็จแล้ว ทุกครั้งที่จะสั่งทำ UI ใหม่ ให้ก๊อปปี้ Prompt ด้านล่างนี้ส่งให้ AI:",

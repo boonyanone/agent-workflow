@@ -99,9 +99,9 @@
     "sec_2_tpl_3_title": "Template 3: NextUI (Vibrant & Modern)",
     "sec_2_tpl_3_desc": "High contrast, beautiful out-of-the-box styling, and colorful accents. Inspiration: nextui.org",
     "sec_2_tpl_3_cmd": "cp .ai/templates/ui/nextui.md .ai/docs/ui_guidelines.md",
-    "sec_2_tpl_4_title": "Template 4: Ant Design (Enterprise & Data Heavy)",
-    "sec_2_tpl_4_desc": "High data-density layouts perfect for internal dashboards and SaaS backends. Inspiration: ant.design",
-    "sec_2_tpl_4_cmd": "cp .ai/templates/ui/antdesign.md .ai/docs/ui_guidelines.md",
+    "sec_2_tpl_4_title": "4. Blocks.so + shadcn/ui (Premium SaaS Dashboards)",
+    "sec_2_tpl_4_desc": "Minimalist, clean, light, and Enterprise-grade. Focused on efficient structure.",
+    "sec_2_tpl_4_cmd": "cp .ai/templates/ui/blocks.md .ai/docs/ui_guidelines.md",
 
     "sec_2_prompt_title": "🎯 How to Prompt the AI for UI",
     "sec_2_prompt_desc": "Once your template is set, paste this exact prompt whenever you ask the AI to build a new interface:",
