@@ -12,7 +12,7 @@ export default function DesignShowcase() {
     { name: "Shadcn UI (Minimal)", image: "/images/shadcn.png" },
     { name: "Aceternity UI (Glassmorphism)", image: "/images/aceternity.png" },
     { name: "NextUI (Vibrant)", image: "/images/nextui.png" },
-    { name: "Ant Design (Enterprise)", image: "/images/antdesign.png" }
+    { name: "Blocks.so (SaaS Dashboards)", image: "/images/blocks.png" }
   ];
 
   return (
