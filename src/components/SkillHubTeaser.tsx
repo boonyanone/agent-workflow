@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-import { Code2, TerminalSquare, Layers, ExternalLink } from "lucide-react";
+import { Code2, TerminalSquare, Layers, ExternalLink, Music } from "lucide-react";
 
 export default function SkillHubTeaser() {
   const t = useTranslations("HomePage");
@@ -31,7 +31,7 @@ export default function SkillHubTeaser() {
           {t("portfolio_subtitle")}
         </motion.p>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 text-left max-w-5xl mx-auto">
           
           {/* Active Project: AI Protocol */}
           <div className="bg-[#0a0a0a] border border-[#555] p-6 hover:border-white transition-colors group relative rounded-xl hover:-translate-y-1 duration-300 shadow-md hover:shadow-xl hover:shadow-white/5">
@@ -47,6 +47,23 @@ export default function SkillHubTeaser() {
             </p>
             <a href="https://github.com/boonyanone/ai-coding-protocol" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-xs text-white font-bold hover:underline">
               View Source <ExternalLink size={14} />
+            </a>
+          </div>
+
+          {/* Active Project: YouOke */}
+          <div className="bg-[#0a0a0a] border border-[#555] p-6 hover:border-white transition-colors group relative rounded-xl hover:-translate-y-1 duration-300 shadow-md hover:shadow-xl hover:shadow-white/5">
+            <div className="flex justify-between items-start mb-6">
+              <Music className="text-white group-hover:text-pink-400 transition-colors" size={28} />
+              <span className="px-3 py-1 text-[10px] font-bold uppercase tracking-wider bg-white text-black rounded-full">
+                {t("project_youoke_status")}
+              </span>
+            </div>
+            <h3 className="text-lg font-bold text-white mb-3">{t("project_youoke_title")}</h3>
+            <p className="text-gray-400 mb-6 leading-relaxed text-sm">
+              {t("project_youoke_desc")}
+            </p>
+            <a href="https://play.okeforyou.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-xs text-white font-bold hover:underline">
+              Play Now <ExternalLink size={14} />
             </a>
           </div>
 

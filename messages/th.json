@@ -44,6 +44,9 @@
     "project_3_title": "MCP Tool Registry",
     "project_3_desc": "ศูนย์กลางสำหรับการค้นหาและติดตั้ง Model Context Protocol Servers ระดับโลก",
     "project_3_status": "เร็วๆ นี้",
+    "project_youoke_title": "YouOke",
+    "project_youoke_desc": "คาราโอเกะออนไลน์ฟรี ไม่ต้องติดตั้ง ทำงานโดยตรงในเบราว์เซอร์ ใช้ได้กับอุปกรณ์หลากหลาย ฐานข้อมูลเพลงจาก YouTube ครบถ้วนและมีคุณภาพสูง",
+    "project_youoke_status": "พร้อมใช้งาน",
 
     "problem_section_title": "ปัญหาคลาสสิกของการใช้ AI เขียนโค้ด",
     "problem_section_subtitle": "เวลาสเกลโปรเจกต์ให้ใหญ่ขึ้น ทีมพัฒนามักจะเจอปัญหาที่ไม่ได้เกิดจากตัว AI แต่เกิดจากวิธีการป้อนข้อมูล โปรโตคอลนี้เข้ามาแก้ 3 ปัญหาหลัก:",

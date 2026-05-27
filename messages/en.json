@@ -44,6 +44,9 @@
     "project_3_title": "MCP Tool Registry",
     "project_3_desc": "The definitive hub for discovering and installing Model Context Protocol servers.",
     "project_3_status": "Coming Soon",
+    "project_youoke_title": "YouOke",
+    "project_youoke_desc": "Free online karaoke on YouTube. No installation required, works directly in your browser. Huge high-quality song database powered by YouTube.",
+    "project_youoke_status": "Production",
 
     "problem_section_title": "The Classic AI Coding Bottlenecks",
     "problem_section_subtitle": "As projects scale, developers often encounter architectural bottlenecks in how data is fed to AI. This protocol solves three main issues:",
