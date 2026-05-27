@@ -31,7 +31,7 @@ export default function SkillHubTeaser() {
           {t("portfolio_subtitle")}
         </motion.p>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 text-left max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
           
           {/* Active Project: AI Protocol */}
           <div className="bg-[#0a0a0a] border border-[#555] p-6 hover:border-white transition-colors group relative rounded-xl hover:-translate-y-1 duration-300 shadow-md hover:shadow-xl hover:shadow-white/5">
