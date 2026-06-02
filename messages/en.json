@@ -100,8 +100,12 @@
     "sec_2_tpl_3_desc": "High contrast, beautiful out-of-the-box styling, and colorful accents. Inspiration: nextui.org",
     "sec_2_tpl_3_cmd": "cp .ai/templates/ui/nextui.md .ai/docs/ui_guidelines.md",
     "sec_2_tpl_4_title": "4. Blocks.so + shadcn/ui (Premium SaaS Dashboards)",
-    "sec_2_tpl_4_desc": "Minimalist, clean, light, and Enterprise-grade. Focused on efficient structure.",
+    "sec_2_tpl_4_desc": "Minimal, clean, and light. Focuses on efficient structure and enterprise look.",
     "sec_2_tpl_4_cmd": "cp .ai/templates/ui/blocks.md .ai/docs/ui_guidelines.md",
+
+    "sec_2_tpl_5_title": "5. Impeccable Design Critic (Elevate Premium Design)",
+    "sec_2_tpl_5_desc": "(NEW!) This feature doesn't dictate a UI framework structure, but rather enforces \"Design Psychology Rules\" (Spacing, Motion, avoiding generic AI tropes). It can be activated alongside any of the templates above:",
+    "sec_2_tpl_5_cmd": "cp .ai/templates/ui/impeccable-principles.md .ai/docs/impeccable-principles.md",
 
     "sec_2_prompt_title": "🎯 How to Prompt the AI for UI",
     "sec_2_prompt_desc": "Once your template is set, paste this exact prompt whenever you ask the AI to build a new interface:",

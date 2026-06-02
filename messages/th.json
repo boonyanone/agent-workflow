@@ -106,6 +106,10 @@
     "sec_2_tpl_4_desc": "มินิมอล สะอาดตา สว่าง และดูเป็น Enterprise เน้นโครงสร้างที่มีประสิทธิภาพ",
     "sec_2_tpl_4_cmd": "cp .ai/templates/ui/blocks.md .ai/docs/ui_guidelines.md",
 
+    "sec_2_tpl_5_title": "5. Impeccable Design Critic (ยกระดับความพรีเมียมให้งานออกแบบ)",
+    "sec_2_tpl_5_desc": "(ใหม่!) ฟีเจอร์นี้ไม่ได้บังคับโครงสร้าง UI แต่จะบังคับ \"กฏจิตวิทยาการออกแบบ\" (Spacing, Motion, ป้องกันการออกแบบจำเจแบบ AI ทั่วไป) สามารถเปิดใช้งานควบคู่กับ Template ข้อ 1-4 ด้านบนได้เลย เพื่อให้งานออกมาเนี๊ยบที่สุด:",
+    "sec_2_tpl_5_cmd": "cp .ai/templates/ui/impeccable-principles.md .ai/docs/impeccable-principles.md",
+
     "sec_2_prompt_title": "🎯 วิธีสั่ง AI ให้ทำตาม Design System",
     "sec_2_prompt_desc": "เมื่อคุณคัดลอกไฟล์เสร็จแล้ว ทุกครั้งที่จะสั่งทำ UI ใหม่ ให้ก๊อปปี้ Prompt ด้านล่างนี้ส่งให้ AI:",
     "sec_2_prompt_code": "ก่อนที่คุณจะเริ่มเขียนโค้ดหน้า UI โปรดอ่านและทำความเข้าใจไฟล์ .ai/docs/ui_guidelines.md อย่างละเอียด ห้ามใช้สีหรือคลาส CSS นอกเหนือจากที่ระบุในไฟล์นั้นเด็ดขาด และห้ามใช้ CSS Inline",
