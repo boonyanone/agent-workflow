@@ -223,6 +223,10 @@ export default function ManualPage() {
                 <p className="mb-6 text-gray-400 leading-relaxed">{t("sec_4_desc")}</p>
                 <div className="space-y-6">
                   <div>
+                    <h3 className="font-mono text-white bg-[#111] px-2 py-1 inline-block rounded mb-2">{t("sec_4_file_0")}</h3>
+                    <p className="text-gray-400 mb-2">{t("sec_4_desc_0")}</p>
+                  </div>
+                  <div>
                     <h3 className="font-mono text-white bg-[#111] px-2 py-1 inline-block rounded mb-2">{t("sec_4_file_1")}</h3>
                     <p className="text-gray-400 mb-2">{t("sec_4_desc_1")}</p>
                     <CodeBlock command={t("sec_4_cmd_1")} />

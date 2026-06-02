@@ -84,7 +84,7 @@
     "sec_1_step_3_a": ".ai/STATE.md - Acts as the RAM for active tasks.",
     "sec_1_step_3_b": ".ai/REFLECTIONS.md - Acts as a ledger for solved bugs.",
     "sec_1_step_3_c": ".ai/docs/ - Acts as the Hard Drive for system documentation.",
-    "sec_1_note": "Optional: We highly recommend installing the Git Hook to prevent .env uploads:",
+    "sec_1_note": "Optional (But Highly Recommended): Install the Git Hook in \"Strict Blocking Mode\" to prevent .env leaks and enforce that the AI updates memory files (Save Game) before any commit:",
     "sec_1_cmd_2": "./ai-protocol.sh install-hook",
 
     "sec_2_title": "2. Design System Setup",
@@ -117,6 +117,8 @@
 
     "sec_4_title": "4. Memory Management (Second Brain)",
     "sec_4_desc": "Keeping memory files small and concise saves tokens and keeps the AI highly intelligent.",
+    "sec_4_file_0": "MEMORY.md (Long-term Save Game):",
+    "sec_4_desc_0": "(NEW!) Acts as the long-term memory. The AI must read this at the start of a session (Load Game) and update it when a feature is complete to prevent AI amnesia.",
     "sec_4_file_1": "STATE.md (Temporary RAM):",
     "sec_4_desc_1": "Log only active tasks. Good Example: 'Build Login Button'. Bad Example: Pasting the entire Login code. To clear the state for a new major feature, run:",
     "sec_4_cmd_1": "./ai-protocol.sh clean",
