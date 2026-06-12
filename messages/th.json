@@ -74,6 +74,7 @@
     "menu_6": "6. หน้าปัดสรุปงาน",
     "menu_7": "7. เชื่อมต่อ NotebookLM",
     "menu_8": "8. สรุปคำสั่ง CLI",
+    "menu_9": "9. Knowledge Graph",
 
     "sec_1_title": "1. การติดตั้งและเริ่มต้นโปรเจกต์",
     "sec_1_desc": "การเริ่มต้นใช้งานนั้นง่ายมากครับ ขั้นตอนนี้คือการสร้าง 'สมองความจำ' (Second Brain) ให้กับ AI ในโปรเจกต์ของคุณ",
@@ -183,6 +184,22 @@
     "sec_8_tr_8_1": "install-mcp",
     "sec_8_tr_8_2": "ติดตั้ง Model Context Protocol (MCP) เชื่อมโยงแอปข้างนอก",
     "sec_8_tr_9_1": "auth-mcp",
-    "sec_8_tr_9_2": "ยืนยันตัวตนกับ Google อัตโนมัติด้วย Chrome Cookie"
+    "sec_8_tr_9_2": "ยืนยันตัวตนกับ Google อัตโนมัติด้วย Chrome Cookie",
+    "sec_8_tr_10_1": "install-graph",
+    "sec_8_tr_10_2": "ติดตั้งเครื่องมือ Understand-Anything (Knowledge Graph)",
+    "sec_8_tr_11_1": "scan",
+    "sec_8_tr_11_2": "แสดงคำแนะนำวิธีสแกน Knowledge Graph ใน IDE",
+
+    "sec_9_title": "9. Knowledge Graph (ผังโครงสร้างโปรเจกต์)",
+    "sec_9_desc": "เพื่อป้องกันไม่ให้ AI มั่วแก้โค้ดข้ามไฟล์จนสถาปัตยกรรมพัง คุณสามารถสร้าง \"แผนผังความรู้ (Knowledge Graph)\" เพื่อให้ AI เห็นภาพรวมทั้งหมดได้",
+    "sec_9_step_1": "1. ติดตั้ง: รันคำสั่ง ./ai-protocol.sh install-graph เพื่อติดตั้งปลั๊กอิน Understand-Anything ลงใน IDE ของคุณ (เช่น Cursor, Copilot, Antigravity)",
+    "sec_9_step_2": "2. สแกนโปรเจกต์: เปิดหน้าต่างแชท AI ใน IDE ของคุณแล้วพิมพ์คำสั่ง:",
+    "sec_9_cmd_1": "/understand",
+    "sec_9_step_2_note": "AI จะทำการสแกนโค้ดทั้งหมดแล้วสร้างไฟล์ .understand-anything/knowledge-graph.json ขึ้นมา",
+    "sec_9_step_3": "3. ดูแผนผัง: หากต้องการดูแผนผังความสัมพันธ์ของโค้ดแบบภาพกราฟิกสวยงาม ให้พิมพ์:",
+    "sec_9_cmd_2": "/understand-dashboard",
+    "sec_9_help_title": "ฟีเจอร์นี้ช่วยอะไร?",
+    "sec_9_help_1": "กฎของโปรโตคอล (.cursorrules) จะบังคับให้ AI ต้องอ่านกราฟตัวนี้ก่อนวางแผนแก้โค้ดที่กระทบหลายไฟล์เสมอ",
+    "sec_9_help_2": "หากคุณแก้โค้ดไปมากกว่า 10 ไฟล์โดยไม่ยอมอัปเดตกราฟ ระบบ Git Pre-commit hook ของเราจะแจ้งเตือน (Warning) ให้คุณพิมพ์ /understand ใหม่ เพื่อไม่ให้ AI ทำงานโดยใช้แผนผังที่ล้าสมัย"
   }
 }

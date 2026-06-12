@@ -108,6 +108,7 @@ export default function ManualPage() {
                 <a href="#sec6" className="block text-sm font-medium text-gray-500 hover:text-white transition-colors">{t("menu_6")}</a>
                 <a href="#sec7" className="block text-sm font-medium text-gray-500 hover:text-white transition-colors">{t("menu_7")}</a>
                 <a href="#sec8" className="block text-sm font-medium text-gray-500 hover:text-white transition-colors">{t("menu_8")}</a>
+                <a href="#sec9" className="block text-sm font-medium text-gray-500 hover:text-white transition-colors">{t("menu_9")}</a>
               </nav>
             </div>
           </aside>
@@ -320,6 +321,8 @@ export default function ManualPage() {
                         [t("sec_8_tr_7_1"), t("sec_8_tr_7_2")],
                         [t("sec_8_tr_8_1"), t("sec_8_tr_8_2")],
                         [t("sec_8_tr_9_1"), t("sec_8_tr_9_2")],
+                        [t("sec_8_tr_10_1"), t("sec_8_tr_10_2")],
+                        [t("sec_8_tr_11_1"), t("sec_8_tr_11_2")],
                       ].map((row, i) => (
                         <tr key={i} className="hover:bg-[#111] transition-colors">
                           <td className="px-6 py-4 font-mono text-sm text-blue-400">{row[0]}</td>
@@ -328,6 +331,31 @@ export default function ManualPage() {
                       ))}
                     </tbody>
                   </table>
+                </div>
+              </section>
+
+              {/* Sec 9 */}
+              <section id="sec9" className="scroll-mt-32">
+                <h2 className="text-xl font-bold text-white mb-4">{t("sec_9_title")}</h2>
+                <p className="mb-6 text-gray-400 leading-relaxed">{t("sec_9_desc")}</p>
+                <ol className="list-decimal pl-6 space-y-4 mb-8">
+                  <li>{t("sec_9_step_1")}</li>
+                  <li>{t("sec_9_step_2")}
+                    <CodeBlock command={t("sec_9_cmd_1")} />
+                    <p className="text-sm text-gray-400 mt-2">{t("sec_9_step_2_note")}</p>
+                  </li>
+                  <li>{t("sec_9_step_3")}
+                    <CodeBlock command={t("sec_9_cmd_2")} />
+                  </li>
+                </ol>
+                <div className="bg-[#111] p-6 rounded-lg border border-[#333]">
+                  <h3 className="text-lg font-bold text-white mb-3 flex items-center gap-2">
+                    <span className="text-blue-400">💡</span> {t("sec_9_help_title")}
+                  </h3>
+                  <ul className="list-disc pl-6 space-y-2 text-gray-300">
+                    <li>{t("sec_9_help_1")}</li>
+                    <li>{t("sec_9_help_2")}</li>
+                  </ul>
                 </div>
               </section>
 

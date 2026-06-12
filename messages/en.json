@@ -74,6 +74,7 @@
     "menu_6": "6. Dashboard",
     "menu_7": "7. NotebookLM",
     "menu_8": "8. CLI Summary",
+    "menu_9": "9. Knowledge Graph",
 
     "sec_1_title": "1. Installation & Initialization",
     "sec_1_desc": "Getting started is very easy. This step creates the 'Second Brain' for the AI in your project.",
@@ -180,6 +181,22 @@
     "sec_8_tr_8_1": "install-mcp",
     "sec_8_tr_8_2": "Installs the Model Context Protocol connection",
     "sec_8_tr_9_1": "auth-mcp",
-    "sec_8_tr_9_2": "Authenticates Google automatically via Chrome Cookie"
+    "sec_8_tr_9_2": "Authenticates Google automatically via Chrome Cookie",
+    "sec_8_tr_10_1": "install-graph",
+    "sec_8_tr_10_2": "Installs the Understand-Anything plugin",
+    "sec_8_tr_11_1": "scan",
+    "sec_8_tr_11_2": "Displays instructions to scan project architecture",
+
+    "sec_9_title": "9. Knowledge Graph (Understand-Anything)",
+    "sec_9_desc": "To prevent AI from editing files blindly and breaking the architecture, you can generate a Visual Knowledge Graph of your entire project.",
+    "sec_9_step_1": "1. Install: Run ./ai-protocol.sh install-graph to install the Understand-Anything plugin into your IDE (Cursor, Copilot, Antigravity).",
+    "sec_9_step_2": "2. Scan the Project: Open your AI chat window in your IDE and type:",
+    "sec_9_cmd_1": "/understand",
+    "sec_9_step_2_note": "The AI will scan your repository and create .understand-anything/knowledge-graph.json.",
+    "sec_9_step_3": "3. View the Dashboard: To visually explore your codebase architecture, type:",
+    "sec_9_cmd_2": "/understand-dashboard",
+    "sec_9_help_title": "How it helps:",
+    "sec_9_help_1": "The protocol rules (.cursorrules) automatically force the AI to read this graph before making any multi-file changes or crossing architectural layers (e.g., UI to Database).",
+    "sec_9_help_2": "If you edit more than 10 files without updating the graph, the Git Pre-commit hook will warn you to run /understand again to keep the AI's map up-to-date."
   }
 }
