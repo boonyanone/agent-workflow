@@ -107,6 +107,10 @@
     "sec_2_tpl_5_desc": "(NEW!) This feature doesn't dictate a UI framework structure, but rather enforces \"Design Psychology Rules\" (Spacing, Motion, avoiding generic AI tropes). It can be activated alongside any of the templates above:",
     "sec_2_tpl_5_cmd": "cp .ai/templates/ui/impeccable-principles.md .ai/docs/impeccable-principles.md",
 
+    "sec_2_tpl_6_title": "6. Anti-Slop Design Critic (Taste-Skill)",
+    "sec_2_tpl_6_desc": "(NEW!) A rigorous framework specifically designed to force AI to avoid generic 'slop' design tropes (e.g., generic gradients, messy spacing, boring typography). You can activate it by running:",
+    "sec_2_tpl_6_cmd": "cp .ai/templates/ui/taste-skill.md .ai/docs/taste-skill.md",
+
     "sec_2_prompt_title": "🎯 How to Prompt the AI for UI",
     "sec_2_prompt_desc": "Once your template is set, paste this exact prompt whenever you ask the AI to build a new interface:",
     "sec_2_prompt_code": "Before writing any UI code, strictly read and internalize .ai/docs/ui_guidelines.md. Do NOT invent new colors or classes outside of these guidelines. Inline CSS is strictly forbidden.",
